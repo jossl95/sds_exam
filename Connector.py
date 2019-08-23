@@ -3,7 +3,7 @@
 import requests,os,time
 def ratelimit():
     "A function that handles the rate of your calls."
-    time.sleep(0.5) # sleep one second.
+    time.sleep(0.1) # sleep one second.
 
 class Connector():
     def __init__(self, logfile, overwrite_log=False ,connector_type='requests'\
@@ -74,120 +74,120 @@ class Connector():
             else:
                 self.id = int(l[-1][0])+1
 
-        def get(self,url,project_name):
-            """
-            Method for connector reliably to the internet, with multiple tries and
-            simple error handling, as well as default logging function. Input url and
-            the project name for the log (i.e. is it part of mapping the domain, or is
-            it the part of the final stage in the data collection).
+    def get(self,url,project_name):
+        """
+        Method for connector reliably to the internet, with multiple tries and
+        simple error handling, as well as default logging function. Input url and
+        the project name for the log (i.e. is it part of mapping the domain, or is
+        it the part of the final stage in the data collection).
 
-            Keyword arguments:
-            url              -- str, url
-            project_name     -- str, Name used for analyzing the log. Use case could be
-                              the 'Mapping of domain','Meta_data_collection','main
-                              dat a collection'.
-            """
+        Keyword arguments:
+        url              -- str, url
+        project_name     -- str, Name used for analyzing the log. Use case could be
+                          the 'Mapping of domain','Meta_data_collection','main
+                          dat a collection'.
+        """
 
-            # make sure the default csv seperator is not in the project_name.
-            project_name = project_name.replace(';','-')
+        # make sure the default csv seperator is not in the project_name.
+        project_name = project_name.replace(';','-')
 
-            ## Determine connector method.
-            ## Requests
-            if self.connector_type=='requests':
-                # for loop defining number of retries with the requests method.
-                for _ in range(self.n_tries):
-                    ratelimit()
-                    t = time.time()
-
-                try: # defines error handling
-                     # make get call to server
-                     response = self.session.get(url,timeout = self.timeout)
-
-                     ## Key arguments
-                     err = ''                    # define python error variable as empty assumming success.
-                     success = True              # define success variable
-                     redirect_url = response.url # log current url, after potential redirects
-                     dt = t - time.time()        # define delta-time waiting for the server and downloading content.
-                     size = len(response.text)   # define variable for size of html content of the response.
-                     response_code = response.status_code # log status code.
-                     ## log...
-                     call_id = self.id           # get current unique identifier for the call
-                     self.id+=1                  # increment call id
-
-                     # define row to be written in the log.
-                     row = [call_id, project_name, self.connector_type, t, dt, url,\
-                         redirect_url, size, response_code, success, err]
-                     self.log.write('\n'+';'.join(map(str,row)))
-                     self.log.flush()
-
-                     # return response and unique identifier.
-                     return response, call_id
-
-                # Defines Error output
-                except Exception as e:          # define error condition
-                    err = str(e)                # python error
-                    response_code = ''          # blank response code
-                    success = False             # call success = False
-                    size = 0                    # content is empty.
-                    redirect_url = ''           # redirect url empty
-                    dt = t - time.time()        # define delta t
-
-                    ## logging scrape meta data
-                    call_id = self.id             # define unique identifier
-                    self.id+=1                    # increment call_id
-
-                    row = [call_id, project_name, self.connector_type, t, dt, url,
-                           redirect_url, size, response_code, success, err]
-                    self.log.write('\n'+';'.join(map(str,row))) # write row to log.
-                    self.log.flush()
-
-            ## Selenium
-            else:
-                t = time.time()
+        ## Determine connector method.
+        ## Requests
+        if self.connector_type=='requests':
+            # for loop defining number of retries with the requests method.
+            for _ in range(self.n_tries):
                 ratelimit()
-                self.browser.get(url) # use selenium get method
+                t = time.time()
 
-                try: #defines error handling
-                    """
-                    NOTE: several indicators are different than from the indicators
-                    that are established with the requests package. `dt`, does not
-                    necessarily reflect the complete load time. `size` might not  be
-                    correct as selenium works in the background and could still be
-                    loading
-                    """
+            try: # defines error handling
+                 # make get call to server
+                 response = self.session.get(url,timeout = self.timeout)
 
-                    ## Key arguments
-                    err = ''                    # define python error variable as empty assumming success.
-                    success = True              # define success variable
-                    redirect_url = sel.browser.current_url # log current url, after potential redirects
-                    dt = t - time.time()        # define delta-time waiting for the server and downloading content.
-                    size = len(self.browser.page_source)   # define variable for size of html content of the response.
-                    response_code = ''          # log status code.
-                    ## log...
-                    call_id = self.id           # get current unique identifier for the call
-                    self.id+=1                  # increment call id
+                 ## Key arguments
+                 err = ''                    # define python error variable as empty assumming success.
+                 success = True              # define success variable
+                 redirect_url = response.url # log current url, after potential redirects
+                 dt = t - time.time()        # define delta-time waiting for the server and downloading content.
+                 size = len(response.text)   # define variable for size of html content of the response.
+                 response_code = response.status_code # log status code.
+                 ## log...
+                 call_id = self.id           # get current unique identifier for the call
+                 self.id+=1                  # increment call id
 
-                    # Defines row to be written in the log
-                    row = [call_id, project_name, self.connector_type, t, dt, url,\
-                           redirect_url, size, response_code, success, err] # define row
-                    self.log.write('\n'+';'.join(map(str,row))) # write row to log file.
-                    self.log.flush()
+                 # define row to be written in the log.
+                 row = [call_id, project_name, self.connector_type, t, dt, url,\
+                              redirect_url, size, response_code, success, err]
+                 self.log.write('\n'+';'.join(map(str,row)))
+                 self.log.flush()
 
-                    # Using selenium it will not return a response object, instead you
-                    # should call the browser object of the connector.
-                    ## connector.browser.page_source will give you the html.
-                    return None, call_id
+                 # return response and unique identifier.
+                 return response, call_id
 
-                except Exception as e:          # define error condition
-                    err = str(e)                  # python error
-                    response_code = ''            # blank response code
-                    success = False               # call success = False
-                    size = 0                      # content is empty.
-                    redirect_url = ''             # redirect url empty
-                    dt = t - time.time()          # define delta t
+            # Defines Error output
+            except Exception as e:          # define error condition
+                err = str(e)                # python error
+                response_code = ''          # blank response code
+                success = False             # call success = False
+                size = 0                    # content is empty.
+                redirect_url = ''           # redirect url empty
+                dt = t - time.time()        # define delta t
 
-                    # Defines row to be written in the log
-                    row = [call_id, project_name, self.connector_type, t, dt, url,\
-                           redirect_url, size, response_code, success, err] # define row
-                    self.log.write('\n'+';'.join(map(str,row))) # write row to log file.
-                    self.log.flush()
+                ## logging scrape meta data
+                call_id = self.id             # define unique identifier
+                self.id+=1                    # increment call_id
+
+                row = [call_id, project_name, self.connector_type, t, dt, url,
+                       redirect_url, size, response_code, success, err]
+                self.log.write('\n'+';'.join(map(str,row))) # write row to log.
+                self.log.flush()
+
+        ## Selenium
+        else:
+            t = time.time()
+            ratelimit()
+            self.browser.get(url) # use selenium get method
+
+            try: #defines error handling
+                """
+                NOTE: several indicators are different than from the indicators
+                that are established with the requests package. `dt`, does not
+                necessarily reflect the complete load time. `size` might not  be
+                correct as selenium works in the background and could still be
+                loading
+                """
+
+                ## Key arguments
+                err = ''                    # define python error variable as empty assumming success.
+                success = True              # define success variable
+                redirect_url = sel.browser.current_url # log current url, after potential redirects
+                dt = t - time.time()        # define delta-time waiting for the server and downloading content.
+                size = len(self.browser.page_source)   # define variable for size of html content of the response.
+                response_code = ''          # log status code.
+                ## log...
+                call_id = self.id           # get current unique identifier for the call
+                self.id+=1                  # increment call id
+
+                # Defines row to be written in the log
+                row = [call_id, project_name, self.connector_type, t, dt, url,\
+                       redirect_url, size, response_code, success, err] # define row
+                self.log.write('\n'+';'.join(map(str,row))) # write row to log file.
+                self.log.flush()
+
+                # Using selenium it will not return a response object, instead you
+                # should call the browser object of the connector.
+                ## connector.browser.page_source will give you the html.
+                return None, call_id
+
+            except Exception as e:          # define error condition
+                err = str(e)                  # python error
+                response_code = ''            # blank response code
+                success = False               # call success = False
+                size = 0                      # content is empty.
+                redirect_url = ''             # redirect url empty
+                dt = t - time.time()          # define delta t
+
+                # Defines row to be written in the log
+                row = [call_id, project_name, self.connector_type, t, dt, url,\
+                       redirect_url, size, response_code, success, err] # define row
+                self.log.write('\n'+';'.join(map(str,row))) # write row to log file.
+                self.log.flush()
