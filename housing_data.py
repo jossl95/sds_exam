@@ -114,6 +114,7 @@ for p in range(max_page):
 p = pd.concat(price_data, axis=0)
 p = p.reset_index()
 
+file_path = dir + "/data" + "/test_scrape"
 with open(file_path, mode='w', encoding='UTF-8',
               errors='strict', buffering=1) as f:
     f.write(p.to_csv())
