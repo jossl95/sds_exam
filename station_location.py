@@ -67,3 +67,5 @@ longitude = [parse_dms(long[0]) for long in longitude]
 df_location = pd.DataFrame([station, longitude, latitude]).T
 df_location.columns = ['Station', 'Longitude', 'Latitude']
 df_station = pd.merge(table, df_location, on='Station')
+
+print(df_station)
