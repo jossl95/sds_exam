@@ -21,7 +21,8 @@ def links (html):
     link_locations = urlFmt.findall(str(table_html))
     links = ['https://en.wikipedia.org' + i for i in link_locations]
     links = [link for link in links if '/wiki/' in link]
-    for i in ['S-train', 'M3_', 'M4_', 'M2_', 'M1_', 'S-train', 'Template', 'File:', 'List', 'commons.', '_Metro', '_Line', 'Airport']:
+    for i in ['S-train', 'M3_', 'M4_', 'M2_', 'M1_', 'S-train', 'Template',
+              'File:', 'List', 'commons.', '_Metro', '_Line', 'Airport']:
         links = [link for link in links if not i in link]
     return sorted(list(set(links)))
 
