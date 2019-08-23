@@ -13,7 +13,8 @@ html = requests.get(url).text
 # parse table
 table = pd.read_html(html)[1]
 table = table.drop(['Transfer', 'Line'], axis = 1)
-table['Station'] = table['Station'].str.translate({ord('#'): '', ord('†'): ''})
+table['Station'] = table['Station']
+
 
 # importing meta-data on stations
 def links (html):
