@@ -388,3 +388,75 @@ df_sstation = pd.merge(table, df_location, on='Station')
 # Shows the s-train stations
 df_sstation
 
+#################################################################
+#                                                               #
+#          Reliability and quality of the data                  #
+#                                                               #
+#################################################################
+
+## The following code seks to investigate the reliaility and quality of the data ##
+
+# Importing the relevant packages
+import pandas as pd
+import matplotlib.pyplot as plt
+%matplotlib inline
+import seaborn as sns
+import datetime as dt
+import random 
+
+##################################################################
+#                                                                #
+#       Random sample inspection of our data                     #
+#                                                                #
+##################################################################
+
+# Random sample of the data scraped from boliga.dk
+boliga_data.sample(15)
+
+# Random sample of data from the metro stations
+df_mstation.sample(5)
+
+# Random sample of data from the s-train stations
+df_sstation.sample(5)
+
+# Checks if our scraped data contains dublicates
+# Boliga constains 14.400 sold houses in the chosen period of time (01/01/1995 - 31/12/2007)
+len(boliga_data), len(boliga_data.drop(dublicated))
+
+# Shows the amount of different real estate types (appartments, houses, terraced house)
+boliga_data['Type'].value_counts()
+
+# Histogram of the distrubution of square meters
+histogram = boliga_data['m2'].hist(bins=20)
+
+##########################################################
+#                                                        #
+#              Visulization of the log file              #
+#                                                        #
+##########################################################
+
+# Loading the logfile as a pandas dataframe
+log_df = pd.read_csv('Scraping_file.csv', sep=';')
+
+# Creates new column
+dt = log_df.dt.values[0]
+
+# Converts into datetime
+log_df['dt'] = pd.to_datetime(log_df.t,unit='s') #unit is seconds
+
+# Visulization of the time it took to make the call for data
+plt.style.use('ggplot')
+plt.figure(figsize = (20, 6))
+plt.plot(log_df['dt'], log_df.delta_t)
+plt.ylabel('Delta t')
+plt.xlabel('Scraping process')
+plt.title('The time it took to make the call for data')
+
+# Visulization of the response size through the scraping process
+plt.style.use('ggplot')
+plt.figure(figsiz = (20, 6))
+plt.plot(log_df.dt, log_df.response_size)
+plt.ylabel('Response size')
+plt.xlabel('Scraping process')
+plt.title('The response size through the scraping process')
+
