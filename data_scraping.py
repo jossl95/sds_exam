@@ -421,7 +421,7 @@ df_sstation.sample(5)
 
 # Checks if our scraped data contains dublicates
 # Boliga constains 14.400 sold houses in the chosen period of time (01/01/1995 - 31/12/2007)
-len(boliga_data), len(boliga_data.drop(dublicated))
+len(boliga_data), len(boliga_data.drop_duplicates())
 
 # Shows the amount of different real estate types (appartments, houses, terraced house)
 boliga_data['Type'].value_counts()
@@ -444,7 +444,7 @@ dt = log_df.dt.values[0]
 # Converts into datetime
 log_df['dt'] = pd.to_datetime(log_df.t,unit='s') #unit is seconds
 
-# Visulization of the time it took to make the call for data
+# Visualization of the time it took to make the call for data
 plt.style.use('ggplot')
 plt.figure(figsize = (20, 6))
 plt.plot(log_df['dt'], log_df.delta_t)
@@ -452,7 +452,7 @@ plt.ylabel('Delta t')
 plt.xlabel('Scraping process')
 plt.title('The time it took to make the call for data')
 
-# Visulization of the response size through the scraping process
+# Visualization of the response size through the scraping process
 plt.style.use('ggplot')
 plt.figure(figsiz = (20, 6))
 plt.plot(log_df.dt, log_df.response_size)
