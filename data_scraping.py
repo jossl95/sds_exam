@@ -257,7 +257,7 @@ for p in range(max_page):
 
 # Convert the list into one table and resets index
 boliga_data = pd.concat(price_data, axis=0)
-boliga_data = p.reset_index()
+boliga_data = boliga_data.reset_index()
 
 # Saves the data in a csv file
 file_path = dir + "/data" + "/test_scrape"
@@ -426,8 +426,8 @@ len(boliga_data), len(boliga_data.drop(dublicated))
 # Shows the amount of different real estate types (appartments, houses, terraced house)
 boliga_data['Type'].value_counts()
 
-# Histogram of the distrubution of square meters
-histogram = boliga_data['m2'].hist(bins=20)
+# Histogram of the distrubution of square meters 
+m2_distribution = boliga_data['m2'].hist(bins=20)
 
 ##########################################################
 #                                                        #
