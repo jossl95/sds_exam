@@ -135,6 +135,7 @@ import pandas as pd
 from bs4 import BeautifulSoup
 from datetime import datetime
 import scraping_class
+import re
 
 ##################################
 #      Scraping from Boliga      #
@@ -192,47 +193,15 @@ def scraping_function(url):
     df_table['Date_of_sale'] = df_table['Date_of_sale'].apply(lambda x: format_dates(x))
     df_table['Date_of_sale'] = pd.to_datetime(df_table['Date_of_sale'], format='%m%d%Y')
 
-    # Calling the geolocator from geopy
-    geolocator = Nominatim(user_agent="Social Data Science Student", timeout = 20)
-
-    # Defining a function which downloads information about longtitude and latitude
-    def address_parser (address_list):
-        street =  []
-        locations = []
-        latitude = []
-        longitude = []
-        for addr in address_list:
-            a = addr.split(',')
-            a = a[0] + ' ' + a[-1][6:]
-            street.append(a)
-            loc = geolocator.geocode(a)
-            if loc != None:
-                lati = loc.latitude
-                long = loc.longitude
-                stre = loc.address
-            else:
-                stre, lati, long = None, None, None
-            latitude.append(lati)
-            longitude.append(long)
-            locations.append(stre)
-        return street, locations, latitude, longitude
-
-    street, locations, latitude, longitude = address_parser(df_table['Address'])
-
-    # Transforming into a pandas dataframe
-    df_location = pd.DataFrame([street, locations, latitude, longitude],
-                index = ['Address', 'Location_info', 'Latitude', 'Longitude']).T
-
-    df = pd.concat([df_table, df_location], axis=1, join='inner')
-
     # Saves the file path
     dir = str(os.getcwd())
     file_path = str(dir + '/boliga' +'/scrape' +'/%d'%call_id)
 
     with open(file_path, mode='w', encoding='UTF-8',
               errors='strict', buffering=1) as f:
-        f.write(df.to_csv())
-    return df
+        f.write(df_table.to_csv())
+
+    return df_table
 
 # Making folders for the exam project
 dir = str(os.getcwd())
@@ -244,7 +213,7 @@ if not os.path.isdir(project):    # Checks if the folder exist
 
 # Making a for loop, which loops through page 1 to 288, so that we get data from  01/01/1995 - 31/12/2007
 price_data = []
-max_page = 5 #288
+max_page = 2 #288
 for p in range(max_page):
     url = 'https://www.boliga.dk/salg/resultater?salesDateMin=1995&zipcodeFrom=1000&zipcodeTo=2499&searchTab=1&page='\
     + str(p) + '&sort=date-a'
@@ -256,7 +225,7 @@ boliga_data = pd.concat(price_data, axis=0)
 boliga_data = boliga_data.reset_index()
 
 # Saves the data in a csv file
-file_path = dir + "/data" + "/test_scrape"
+file_path = dir + "/boliga/data/housing_data.csv"
 with open(file_path, mode='w', encoding='UTF-8',
               errors='strict', buffering=1) as f:
     f.write(boliga_data.to_csv())
@@ -270,13 +239,13 @@ with open(file_path, mode='w', encoding='UTF-8',
 ####################################################
 # Scrape initial table of stations
 url = "https://en.wikipedia.org/wiki/List_of_Copenhagen_Metro_stations"
-html = requests.get(url).text
+resp, callid = connector.get(url, 'mstation_scrape')
+html = resp.text
 
 # parse table
-table = pd.read_html(html)[1]
+table = pd.read_html(resp.text)[1]
 table = table.drop(['Transfer', 'Line'], axis = 1)
 table['Station'] = table['Station']
-
 
 # Importing meta-data on stations
 def links (html):
@@ -338,6 +307,7 @@ df_location.columns = ['Station', 'Longitude', 'Latitude']
 df_mstation = pd.merge(table, df_location, on='Station')
 
 # store the metro stations
+file_path = dir + "/boliga/data/mstation_data.csv"
 with open(file_path, mode='w', encoding='UTF-8',
               errors='strict', buffering=1) as f:
     f.write(df_mstation.to_csv())
@@ -347,10 +317,11 @@ with open(file_path, mode='w', encoding='UTF-8',
 ##########################################################
 # Scrape initial table of stations
 url = "https://en.wikipedia.org/wiki/List_of_Copenhagen_S-train_stations"
-html = requests.get(url).text
+resp, callid = connector.get(url, 'sstation_scrape')
+html = resp.text
 
 # Parse table
-table = pd.read_html(html)[1]
+table = pd.read_html(resp.text)[1]
 table = table.drop(['Transfer', 'Line'], axis = 1)
 table['Station'] = table['Station'].str.translate({ord('#'): '', ord('†'): ''})
 
@@ -384,6 +355,7 @@ df_location.columns = ['Station', 'Longitude', 'Latitude']
 df_sstation = pd.merge(table, df_location, on='Station')
 
 # Shows the s-train stations
+file_path = dir + "/boliga/data/sstation_data.csv"
 with open(file_path, mode='w', encoding='UTF-8',
               errors='strict', buffering=1) as f:
     f.write(df_sstation.to_csv())
@@ -398,7 +370,6 @@ with open(file_path, mode='w', encoding='UTF-8',
 # Importing the relevant packages
 import pandas as pd
 import matplotlib.pyplot as plt
-%matplotlib inline
 import seaborn as sns
 import datetime as dt
 import random
@@ -458,3 +429,43 @@ plt.ylabel('Response size')
 plt.xlabel('Scraping process')
 plt.title('The response size through the scraping process')
 plt.show()
+
+##########################################################
+#                                                        #
+#             geolocation parser for houses              #
+#                                                        #
+##########################################################
+
+# Calling the geolocator from geopy
+geolocator = Nominatim(user_agent="Social Data Science Student", timeout = 20)
+
+# Defining a function which downloads information about longtitude and latitude
+def address_parser (address_list):
+    street =  []
+    locations = []
+    latitude = []
+    longitude = []
+    for addr in address_list:
+        a = addr.split(',')
+        a = a[0] + ' ' + a[-1][6:]
+        street.append(a)
+        loc = geolocator.geocode(a)
+        if loc != None:
+            lati = loc.latitude
+            long = loc.longitude
+            stre = loc.address
+        else:
+            stre, lati, long = None, None, None
+        latitude.append(lati)
+        longitude.append(long)
+        locations.append(stre)
+    return street, locations, latitude, longitude
+
+street, locations, latitude, longitude = address_parser(boliga_data['Address'])
+
+# Transforming into a pandas dataframe
+df_location = pd.DataFrame([street, locations, latitude, longitude],
+            index = ['Address_street', 'Location_info', 'Latitude',
+                     'Longitude']).T
+
+boliga_data = pd.concat([boliga_data, df_location], axis=1, join='inner')
