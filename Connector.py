@@ -1,5 +1,4 @@
 ### Define our Connector
-
 import requests,os,time
 def ratelimit():
     "A function that handles the rate of your calls."
@@ -43,6 +42,7 @@ class Connector():
             geckodriver here: https://github.com/mozilla/geckodriver/releases'
             # start the browser with a path to the geckodriver.
             self.browser = webdriver.Firefox(executable_path=path2selenium)
+
         # set the connector_type
         self.connector_type = connector_type
 
