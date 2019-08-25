@@ -1,9 +1,17 @@
 from selenium import webdriver
-import time
-import os
+import time, os, glob, re
 import pandas as pd
 import Connector
-import glob
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import datetime as dt
+import random
+import requests
+import pandas as pd
+from bs4 import BeautifulSoup
+from datetime import datetime
+import scraping_class
 
 #######################
 #    Scraping data    #
