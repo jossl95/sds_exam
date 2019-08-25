@@ -36,7 +36,7 @@ def df2table(html):
 
     #  Removing dublicates of the type of residence
     for i in range(len(df['Type'])):
-        for j in ['EEjerlejlighed', 'VVilla', 'RRækkehus']:
+        for j in ['EEjerlejlighed', 'VVilla', 'RRækkehus', 'FFritidshus']:
             df['Type'][i] = df['Type'][i].replace(j,'')
 
     # Changing the prices, so that it's numeric values
