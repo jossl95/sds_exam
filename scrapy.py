@@ -152,6 +152,9 @@ with open(file_path, mode='w', encoding='UTF-8',
 ##################
 # Metro stations #
 ##################
+logfile = 'log_station_scrape.csv'## name your log file.
+connector = Connector(logfile)
+
 # Scrape initial table of stations
 url = "https://en.wikipedia.org/wiki/List_of_Copenhagen_Metro_stations"
 resp, callid = connector.get(url, 'mstation_scrape')
