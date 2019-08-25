@@ -1,0 +1,751 @@
+,index,Address,Sell_price,Date_of_sale,Type,sqm_price,Rooms,m2,Building_year
+0,0," Platanvej 6, 9. 2, 1810 Frederiksberg C",471425,1995-01-01, Ejerlejlighed ,6548, 2, 72 , 1972
+1,1," Pileskellet 8, 2000 Frederiksberg",1009430,1995-01-01, Ejerlejlighed ,6349, 5, 159 , 1979
+2,2," Matthæusgade 46B, 5. 548, 1666 København V",168000,1995-01-01, Ejerlejlighed ,3231, 1, 52 , 1970
+3,3," Vestergade 13, 2, 1456 København K",830000,1995-01-02, Villa ,5887, 5, 141 , 1905
+4,4," Åboulevard 23, st. th, 1960 Frederiksberg C",299593,1995-01-03, Ejerlejlighed ,1958, 5, 124 , 1885
+5,5," Livjægergade 32, st. th, 2100 København Ø",451280,1995-01-03, Ejerlejlighed ,5712, 3, 79 , 1896
+6,6," Englandsvej 47, 1. tv, 2300 København S",384781,1995-01-04, Ejerlejlighed ,5743, 3, 67 , 1935
+7,7," Betty Nansens Alle 21, 3. tv, 2000 Frederiksberg",1100000,1995-01-05, Ejerlejlighed ,8527, 4, 129 , 1976
+8,8," Jyllandsvej 13, 2000 Frederiksberg",1522785,1995-01-05, Villa ,10877, 3, 140 , 1890
+9,9," Erantisvej 20, 2300 København S",810400,1995-01-05, Villa ,8024, 4, 101 , 1923
+10,10," Straussvej 14, st. th, 2450 København SV",176000,1995-01-09, Ejerlejlighed ,1892, 4, 93 , 1934
+11,11," Livjægergade 32, 1. tv, 2100 København Ø",465000,1995-01-10, Ejerlejlighed ,5741, 4, 81 , 1896
+12,12," Åboulevard 34E, 1. tv, 2200 København N",269000,1995-01-11, Ejerlejlighed ,6256, 2, 43 , 1885
+13,13," Ribegade 12, st. tv, 2100 København Ø",650680,1995-01-11, Ejerlejlighed ,5333, 4, 122 , 1904
+14,14," Bianco Lunos Alle 4B, 2. th, 1868 Frederiksberg C",464040,1995-01-11, Ejerlejlighed ,7139, 2, 65 , 1962
+15,15," Wibrandtsvej 19, 2300 København S",670876,1995-01-12, Villa ,7711, 2, 87 , 1934
+16,16," Jansvej 54, 2300 København S",555640,1995-01-15, Villa ,6106, 5, 91 , 1926
+17,17," Christianshavns Voldgade 43, 4. tv, 1424 København K",458280,1995-01-15, Ejerlejlighed ,3498, 4, 131 , 1850
+18,18," Gladiolusvej 25, 2300 København S",740000,1995-01-15, Villa ,7551, 3, 98 , 1976
+19,19," Prins Buris Vej 6, 2300 København S",850000,1995-01-16, Villa ,5944, 4, 143 , 1929
+20,20," Lærkeskellet 14, 2000 Frederiksberg",851840,1995-01-16, Ejerlejlighed ,6085, 4, 140 , 1978
+21,21," Hindustanvej 25, 2300 København S",608600,1995-01-16, Villa ,6916, 3, 88 , 1938
+22,22," Helgesensgade 1, 2. tv, 2100 København Ø",430000,1995-01-17, Ejerlejlighed ,3613, 6, 119 , 1895
+23,23," Maltagade 24, 4. th, 2300 København S",189000,1995-01-18, Ejerlejlighed ,3500, 2, 54 , 1934
+24,24," Helgesvej 19, 1. th, 2000 Frederiksberg",358000,1995-01-19, Ejerlejlighed ,3978, 3, 90 , 1893
+25,25," Havnegade 33, 5. th, 1058 København K",979120,1995-01-19, Ejerlejlighed ,6661, 3, 147 , 1870
+26,26," Jerichausgade 15, 1777 København V",820000,1995-01-22, Rækkehus ,5985, 6, 137 , 1893
+27,27," Sankelmarksgade 13, 5. tv, 1676 København V",464500,1995-01-22, Ejerlejlighed ,6112, 3, 76 , 1901
+28,28," Forchhammersvej 33, 2. tv, 1920 Frederiksberg C",555080,1995-01-23, Ejerlejlighed ,6168, 4, 90 , 1893
+29,29," Esromgade 12, 2. th, 2200 København N",961654,1995-01-24, Ejerlejlighed ,11727, 3, 82 , 1903
+30,30," C.F. Richs Vej 85, 3. tv, 2000 Frederiksberg",452000,1995-01-24, Ejerlejlighed ,7533, 2, 60 , 1936
+31,31," Valdemarsgade 44, 4. th, 1665 København V",215500,1995-01-25, Ejerlejlighed ,3716, 3, 58 , 1895
+32,32," C.F. Richs Vej 116, st. tv, 2000 Frederiksberg",375000,1995-01-26, Ejerlejlighed ,5769, 3, 65 , 1937
+33,33," Küchlersgade 20, 1774 København V",365000,1995-01-26, Rækkehus ,1984, 9, 184 , 1887
+34,34," Gerbrandsvej 4, st. 2, 2300 København S",230000,1995-01-26, Ejerlejlighed ,4600, 2, 50 , 1939
+35,35," Classensgade 19, 5. th, 2100 København Ø",1050000,1995-01-27, Ejerlejlighed ,6000, 5, 175 , 1909
+36,36," Fiskedamsgade 27, 3. tv, 2100 København Ø",614126,1995-01-28, Ejerlejlighed ,7059, 3, 87 , 1900
+37,37," Amaliegade 4B, 2, 1256 København K",550925,1995-01-29, Ejerlejlighed ,2611, 4, 211 , 1828
+38,38," Stockholmsgade 43, 2. th, 2100 København Ø",1680000,1995-01-29, Ejerlejlighed ,7119, 7, 236 , 1896
+39,39," Trondhjemsgade 12, 3. th, 2100 København Ø",1082000,1995-01-31, Ejerlejlighed ,6848, 5, 158 , 1932
+40,40," Venedigvej 2, 4. tv, 2300 København S",157094,1995-02-01, Ejerlejlighed ,1939, 3, 81 , 1932
+41,41," Rosenørns Alle 68, 5, 1970 Frederiksberg C",730000,1995-02-01, Ejerlejlighed ,5794, 5, 126 , 1906
+42,42," Danasvej 4, 2. tv, 1910 Frederiksberg C",615000,1995-02-01, Ejerlejlighed ,6910, 4, 89 , 1898
+43,43," Dalmosevej 12, 2400 København NV",1067045,1995-02-02, Villa ,7161, 5, 149 , 1934
+44,44," Løgstørgade 34, 4. th, 2100 København Ø",426890,1995-02-02, Ejerlejlighed ,6187, 2, 69 , 1916
+45,45," Ved Volden 8, 2. th, 1425 København K",388795,1995-02-02, Ejerlejlighed ,4272, 3, 91 , 1938
+46,46," Nygårdsvej 57, st. tv, 2100 København Ø",444000,1995-02-02, Ejerlejlighed ,6343, 3, 70 , 1964
+47,47," Sprogøvej 19, 4. th, 2000 Frederiksberg",600747,1995-02-04, Ejerlejlighed ,6530, 3, 92 , 1982
+48,48," Holsteinsgade 19, st. th, 2100 København Ø",672829,1995-02-04, Ejerlejlighed ,6230, 4, 108 , 1902
+49,49," Horsensgade 6, 1. th, 2100 København Ø",295160,1995-02-05, Ejerlejlighed ,4685, 2, 63 , 1908
+50,0," Platanvej 6, 9. 2, 1810 Frederiksberg C",471425,1995-01-01, Ejerlejlighed ,6548, 2, 72 , 1972
+51,1," Pileskellet 8, 2000 Frederiksberg",1009430,1995-01-01, Ejerlejlighed ,6349, 5, 159 , 1979
+52,2," Matthæusgade 46B, 5. 548, 1666 København V",168000,1995-01-01, Ejerlejlighed ,3231, 1, 52 , 1970
+53,3," Vestergade 13, 2, 1456 København K",830000,1995-01-02, Villa ,5887, 5, 141 , 1905
+54,4," Åboulevard 23, st. th, 1960 Frederiksberg C",299593,1995-01-03, Ejerlejlighed ,1958, 5, 124 , 1885
+55,5," Livjægergade 32, st. th, 2100 København Ø",451280,1995-01-03, Ejerlejlighed ,5712, 3, 79 , 1896
+56,6," Englandsvej 47, 1. tv, 2300 København S",384781,1995-01-04, Ejerlejlighed ,5743, 3, 67 , 1935
+57,7," Betty Nansens Alle 21, 3. tv, 2000 Frederiksberg",1100000,1995-01-05, Ejerlejlighed ,8527, 4, 129 , 1976
+58,8," Jyllandsvej 13, 2000 Frederiksberg",1522785,1995-01-05, Villa ,10877, 3, 140 , 1890
+59,9," Erantisvej 20, 2300 København S",810400,1995-01-05, Villa ,8024, 4, 101 , 1923
+60,10," Straussvej 14, st. th, 2450 København SV",176000,1995-01-09, Ejerlejlighed ,1892, 4, 93 , 1934
+61,11," Livjægergade 32, 1. tv, 2100 København Ø",465000,1995-01-10, Ejerlejlighed ,5741, 4, 81 , 1896
+62,12," Åboulevard 34E, 1. tv, 2200 København N",269000,1995-01-11, Ejerlejlighed ,6256, 2, 43 , 1885
+63,13," Ribegade 12, st. tv, 2100 København Ø",650680,1995-01-11, Ejerlejlighed ,5333, 4, 122 , 1904
+64,14," Bianco Lunos Alle 4B, 2. th, 1868 Frederiksberg C",464040,1995-01-11, Ejerlejlighed ,7139, 2, 65 , 1962
+65,15," Wibrandtsvej 19, 2300 København S",670876,1995-01-12, Villa ,7711, 2, 87 , 1934
+66,16," Jansvej 54, 2300 København S",555640,1995-01-15, Villa ,6106, 5, 91 , 1926
+67,17," Christianshavns Voldgade 43, 4. tv, 1424 København K",458280,1995-01-15, Ejerlejlighed ,3498, 4, 131 , 1850
+68,18," Gladiolusvej 25, 2300 København S",740000,1995-01-15, Villa ,7551, 3, 98 , 1976
+69,19," Prins Buris Vej 6, 2300 København S",850000,1995-01-16, Villa ,5944, 4, 143 , 1929
+70,20," Lærkeskellet 14, 2000 Frederiksberg",851840,1995-01-16, Ejerlejlighed ,6085, 4, 140 , 1978
+71,21," Hindustanvej 25, 2300 København S",608600,1995-01-16, Villa ,6916, 3, 88 , 1938
+72,22," Helgesensgade 1, 2. tv, 2100 København Ø",430000,1995-01-17, Ejerlejlighed ,3613, 6, 119 , 1895
+73,23," Maltagade 24, 4. th, 2300 København S",189000,1995-01-18, Ejerlejlighed ,3500, 2, 54 , 1934
+74,24," Helgesvej 19, 1. th, 2000 Frederiksberg",358000,1995-01-19, Ejerlejlighed ,3978, 3, 90 , 1893
+75,25," Havnegade 33, 5. th, 1058 København K",979120,1995-01-19, Ejerlejlighed ,6661, 3, 147 , 1870
+76,26," Jerichausgade 15, 1777 København V",820000,1995-01-22, Rækkehus ,5985, 6, 137 , 1893
+77,27," Sankelmarksgade 13, 5. tv, 1676 København V",464500,1995-01-22, Ejerlejlighed ,6112, 3, 76 , 1901
+78,28," Forchhammersvej 33, 2. tv, 1920 Frederiksberg C",555080,1995-01-23, Ejerlejlighed ,6168, 4, 90 , 1893
+79,29," Esromgade 12, 2. th, 2200 København N",961654,1995-01-24, Ejerlejlighed ,11727, 3, 82 , 1903
+80,30," C.F. Richs Vej 85, 3. tv, 2000 Frederiksberg",452000,1995-01-24, Ejerlejlighed ,7533, 2, 60 , 1936
+81,31," Valdemarsgade 44, 4. th, 1665 København V",215500,1995-01-25, Ejerlejlighed ,3716, 3, 58 , 1895
+82,32," C.F. Richs Vej 116, st. tv, 2000 Frederiksberg",375000,1995-01-26, Ejerlejlighed ,5769, 3, 65 , 1937
+83,33," Küchlersgade 20, 1774 København V",365000,1995-01-26, Rækkehus ,1984, 9, 184 , 1887
+84,34," Gerbrandsvej 4, st. 2, 2300 København S",230000,1995-01-26, Ejerlejlighed ,4600, 2, 50 , 1939
+85,35," Classensgade 19, 5. th, 2100 København Ø",1050000,1995-01-27, Ejerlejlighed ,6000, 5, 175 , 1909
+86,36," Fiskedamsgade 27, 3. tv, 2100 København Ø",614126,1995-01-28, Ejerlejlighed ,7059, 3, 87 , 1900
+87,37," Amaliegade 4B, 2, 1256 København K",550925,1995-01-29, Ejerlejlighed ,2611, 4, 211 , 1828
+88,38," Stockholmsgade 43, 2. th, 2100 København Ø",1680000,1995-01-29, Ejerlejlighed ,7119, 7, 236 , 1896
+89,39," Trondhjemsgade 12, 3. th, 2100 København Ø",1082000,1995-01-31, Ejerlejlighed ,6848, 5, 158 , 1932
+90,40," Venedigvej 2, 4. tv, 2300 København S",157094,1995-02-01, Ejerlejlighed ,1939, 3, 81 , 1932
+91,41," Rosenørns Alle 68, 5, 1970 Frederiksberg C",730000,1995-02-01, Ejerlejlighed ,5794, 5, 126 , 1906
+92,42," Danasvej 4, 2. tv, 1910 Frederiksberg C",615000,1995-02-01, Ejerlejlighed ,6910, 4, 89 , 1898
+93,43," Dalmosevej 12, 2400 København NV",1067045,1995-02-02, Villa ,7161, 5, 149 , 1934
+94,44," Løgstørgade 34, 4. th, 2100 København Ø",426890,1995-02-02, Ejerlejlighed ,6187, 2, 69 , 1916
+95,45," Ved Volden 8, 2. th, 1425 København K",388795,1995-02-02, Ejerlejlighed ,4272, 3, 91 , 1938
+96,46," Nygårdsvej 57, st. tv, 2100 København Ø",444000,1995-02-02, Ejerlejlighed ,6343, 3, 70 , 1964
+97,47," Sprogøvej 19, 4. th, 2000 Frederiksberg",600747,1995-02-04, Ejerlejlighed ,6530, 3, 92 , 1982
+98,48," Holsteinsgade 19, st. th, 2100 København Ø",672829,1995-02-04, Ejerlejlighed ,6230, 4, 108 , 1902
+99,49," Horsensgade 6, 1. th, 2100 København Ø",295160,1995-02-05, Ejerlejlighed ,4685, 2, 63 , 1908
+100,0," Platanvej 6, 9. 2, 1810 Frederiksberg C",471425,1995-01-01, Ejerlejlighed ,6548, 2, 72 , 1972
+101,1," Pileskellet 8, 2000 Frederiksberg",1009430,1995-01-01, Ejerlejlighed ,6349, 5, 159 , 1979
+102,2," Matthæusgade 46B, 5. 548, 1666 København V",168000,1995-01-01, Ejerlejlighed ,3231, 1, 52 , 1970
+103,3," Vestergade 13, 2, 1456 København K",830000,1995-01-02, Villa ,5887, 5, 141 , 1905
+104,4," Åboulevard 23, st. th, 1960 Frederiksberg C",299593,1995-01-03, Ejerlejlighed ,1958, 5, 124 , 1885
+105,5," Livjægergade 32, st. th, 2100 København Ø",451280,1995-01-03, Ejerlejlighed ,5712, 3, 79 , 1896
+106,6," Englandsvej 47, 1. tv, 2300 København S",384781,1995-01-04, Ejerlejlighed ,5743, 3, 67 , 1935
+107,7," Betty Nansens Alle 21, 3. tv, 2000 Frederiksberg",1100000,1995-01-05, Ejerlejlighed ,8527, 4, 129 , 1976
+108,8," Jyllandsvej 13, 2000 Frederiksberg",1522785,1995-01-05, Villa ,10877, 3, 140 , 1890
+109,9," Erantisvej 20, 2300 København S",810400,1995-01-05, Villa ,8024, 4, 101 , 1923
+110,10," Straussvej 14, st. th, 2450 København SV",176000,1995-01-09, Ejerlejlighed ,1892, 4, 93 , 1934
+111,11," Livjægergade 32, 1. tv, 2100 København Ø",465000,1995-01-10, Ejerlejlighed ,5741, 4, 81 , 1896
+112,12," Åboulevard 34E, 1. tv, 2200 København N",269000,1995-01-11, Ejerlejlighed ,6256, 2, 43 , 1885
+113,13," Ribegade 12, st. tv, 2100 København Ø",650680,1995-01-11, Ejerlejlighed ,5333, 4, 122 , 1904
+114,14," Bianco Lunos Alle 4B, 2. th, 1868 Frederiksberg C",464040,1995-01-11, Ejerlejlighed ,7139, 2, 65 , 1962
+115,15," Wibrandtsvej 19, 2300 København S",670876,1995-01-12, Villa ,7711, 2, 87 , 1934
+116,16," Jansvej 54, 2300 København S",555640,1995-01-15, Villa ,6106, 5, 91 , 1926
+117,17," Christianshavns Voldgade 43, 4. tv, 1424 København K",458280,1995-01-15, Ejerlejlighed ,3498, 4, 131 , 1850
+118,18," Gladiolusvej 25, 2300 København S",740000,1995-01-15, Villa ,7551, 3, 98 , 1976
+119,19," Prins Buris Vej 6, 2300 København S",850000,1995-01-16, Villa ,5944, 4, 143 , 1929
+120,20," Lærkeskellet 14, 2000 Frederiksberg",851840,1995-01-16, Ejerlejlighed ,6085, 4, 140 , 1978
+121,21," Hindustanvej 25, 2300 København S",608600,1995-01-16, Villa ,6916, 3, 88 , 1938
+122,22," Helgesensgade 1, 2. tv, 2100 København Ø",430000,1995-01-17, Ejerlejlighed ,3613, 6, 119 , 1895
+123,23," Maltagade 24, 4. th, 2300 København S",189000,1995-01-18, Ejerlejlighed ,3500, 2, 54 , 1934
+124,24," Helgesvej 19, 1. th, 2000 Frederiksberg",358000,1995-01-19, Ejerlejlighed ,3978, 3, 90 , 1893
+125,25," Havnegade 33, 5. th, 1058 København K",979120,1995-01-19, Ejerlejlighed ,6661, 3, 147 , 1870
+126,26," Jerichausgade 15, 1777 København V",820000,1995-01-22, Rækkehus ,5985, 6, 137 , 1893
+127,27," Sankelmarksgade 13, 5. tv, 1676 København V",464500,1995-01-22, Ejerlejlighed ,6112, 3, 76 , 1901
+128,28," Forchhammersvej 33, 2. tv, 1920 Frederiksberg C",555080,1995-01-23, Ejerlejlighed ,6168, 4, 90 , 1893
+129,29," Esromgade 12, 2. th, 2200 København N",961654,1995-01-24, Ejerlejlighed ,11727, 3, 82 , 1903
+130,30," C.F. Richs Vej 85, 3. tv, 2000 Frederiksberg",452000,1995-01-24, Ejerlejlighed ,7533, 2, 60 , 1936
+131,31," Valdemarsgade 44, 4. th, 1665 København V",215500,1995-01-25, Ejerlejlighed ,3716, 3, 58 , 1895
+132,32," C.F. Richs Vej 116, st. tv, 2000 Frederiksberg",375000,1995-01-26, Ejerlejlighed ,5769, 3, 65 , 1937
+133,33," Küchlersgade 20, 1774 København V",365000,1995-01-26, Rækkehus ,1984, 9, 184 , 1887
+134,34," Gerbrandsvej 4, st. 2, 2300 København S",230000,1995-01-26, Ejerlejlighed ,4600, 2, 50 , 1939
+135,35," Classensgade 19, 5. th, 2100 København Ø",1050000,1995-01-27, Ejerlejlighed ,6000, 5, 175 , 1909
+136,36," Fiskedamsgade 27, 3. tv, 2100 København Ø",614126,1995-01-28, Ejerlejlighed ,7059, 3, 87 , 1900
+137,37," Amaliegade 4B, 2, 1256 København K",550925,1995-01-29, Ejerlejlighed ,2611, 4, 211 , 1828
+138,38," Stockholmsgade 43, 2. th, 2100 København Ø",1680000,1995-01-29, Ejerlejlighed ,7119, 7, 236 , 1896
+139,39," Trondhjemsgade 12, 3. th, 2100 København Ø",1082000,1995-01-31, Ejerlejlighed ,6848, 5, 158 , 1932
+140,40," Venedigvej 2, 4. tv, 2300 København S",157094,1995-02-01, Ejerlejlighed ,1939, 3, 81 , 1932
+141,41," Rosenørns Alle 68, 5, 1970 Frederiksberg C",730000,1995-02-01, Ejerlejlighed ,5794, 5, 126 , 1906
+142,42," Danasvej 4, 2. tv, 1910 Frederiksberg C",615000,1995-02-01, Ejerlejlighed ,6910, 4, 89 , 1898
+143,43," Dalmosevej 12, 2400 København NV",1067045,1995-02-02, Villa ,7161, 5, 149 , 1934
+144,44," Løgstørgade 34, 4. th, 2100 København Ø",426890,1995-02-02, Ejerlejlighed ,6187, 2, 69 , 1916
+145,45," Ved Volden 8, 2. th, 1425 København K",388795,1995-02-02, Ejerlejlighed ,4272, 3, 91 , 1938
+146,46," Nygårdsvej 57, st. tv, 2100 København Ø",444000,1995-02-02, Ejerlejlighed ,6343, 3, 70 , 1964
+147,47," Sprogøvej 19, 4. th, 2000 Frederiksberg",600747,1995-02-04, Ejerlejlighed ,6530, 3, 92 , 1982
+148,48," Holsteinsgade 19, st. th, 2100 København Ø",672829,1995-02-04, Ejerlejlighed ,6230, 4, 108 , 1902
+149,49," Horsensgade 6, 1. th, 2100 København Ø",295160,1995-02-05, Ejerlejlighed ,4685, 2, 63 , 1908
+150,0," Platanvej 6, 9. 2, 1810 Frederiksberg C",471425,1995-01-01, Ejerlejlighed ,6548, 2, 72 , 1972
+151,1," Pileskellet 8, 2000 Frederiksberg",1009430,1995-01-01, Ejerlejlighed ,6349, 5, 159 , 1979
+152,2," Matthæusgade 46B, 5. 548, 1666 København V",168000,1995-01-01, Ejerlejlighed ,3231, 1, 52 , 1970
+153,3," Vestergade 13, 2, 1456 København K",830000,1995-01-02, Villa ,5887, 5, 141 , 1905
+154,4," Åboulevard 23, st. th, 1960 Frederiksberg C",299593,1995-01-03, Ejerlejlighed ,1958, 5, 124 , 1885
+155,5," Livjægergade 32, st. th, 2100 København Ø",451280,1995-01-03, Ejerlejlighed ,5712, 3, 79 , 1896
+156,6," Englandsvej 47, 1. tv, 2300 København S",384781,1995-01-04, Ejerlejlighed ,5743, 3, 67 , 1935
+157,7," Betty Nansens Alle 21, 3. tv, 2000 Frederiksberg",1100000,1995-01-05, Ejerlejlighed ,8527, 4, 129 , 1976
+158,8," Jyllandsvej 13, 2000 Frederiksberg",1522785,1995-01-05, Villa ,10877, 3, 140 , 1890
+159,9," Erantisvej 20, 2300 København S",810400,1995-01-05, Villa ,8024, 4, 101 , 1923
+160,10," Straussvej 14, st. th, 2450 København SV",176000,1995-01-09, Ejerlejlighed ,1892, 4, 93 , 1934
+161,11," Livjægergade 32, 1. tv, 2100 København Ø",465000,1995-01-10, Ejerlejlighed ,5741, 4, 81 , 1896
+162,12," Åboulevard 34E, 1. tv, 2200 København N",269000,1995-01-11, Ejerlejlighed ,6256, 2, 43 , 1885
+163,13," Ribegade 12, st. tv, 2100 København Ø",650680,1995-01-11, Ejerlejlighed ,5333, 4, 122 , 1904
+164,14," Bianco Lunos Alle 4B, 2. th, 1868 Frederiksberg C",464040,1995-01-11, Ejerlejlighed ,7139, 2, 65 , 1962
+165,15," Wibrandtsvej 19, 2300 København S",670876,1995-01-12, Villa ,7711, 2, 87 , 1934
+166,16," Jansvej 54, 2300 København S",555640,1995-01-15, Villa ,6106, 5, 91 , 1926
+167,17," Christianshavns Voldgade 43, 4. tv, 1424 København K",458280,1995-01-15, Ejerlejlighed ,3498, 4, 131 , 1850
+168,18," Gladiolusvej 25, 2300 København S",740000,1995-01-15, Villa ,7551, 3, 98 , 1976
+169,19," Prins Buris Vej 6, 2300 København S",850000,1995-01-16, Villa ,5944, 4, 143 , 1929
+170,20," Lærkeskellet 14, 2000 Frederiksberg",851840,1995-01-16, Ejerlejlighed ,6085, 4, 140 , 1978
+171,21," Hindustanvej 25, 2300 København S",608600,1995-01-16, Villa ,6916, 3, 88 , 1938
+172,22," Helgesensgade 1, 2. tv, 2100 København Ø",430000,1995-01-17, Ejerlejlighed ,3613, 6, 119 , 1895
+173,23," Maltagade 24, 4. th, 2300 København S",189000,1995-01-18, Ejerlejlighed ,3500, 2, 54 , 1934
+174,24," Helgesvej 19, 1. th, 2000 Frederiksberg",358000,1995-01-19, Ejerlejlighed ,3978, 3, 90 , 1893
+175,25," Havnegade 33, 5. th, 1058 København K",979120,1995-01-19, Ejerlejlighed ,6661, 3, 147 , 1870
+176,26," Jerichausgade 15, 1777 København V",820000,1995-01-22, Rækkehus ,5985, 6, 137 , 1893
+177,27," Sankelmarksgade 13, 5. tv, 1676 København V",464500,1995-01-22, Ejerlejlighed ,6112, 3, 76 , 1901
+178,28," Forchhammersvej 33, 2. tv, 1920 Frederiksberg C",555080,1995-01-23, Ejerlejlighed ,6168, 4, 90 , 1893
+179,29," Esromgade 12, 2. th, 2200 København N",961654,1995-01-24, Ejerlejlighed ,11727, 3, 82 , 1903
+180,30," C.F. Richs Vej 85, 3. tv, 2000 Frederiksberg",452000,1995-01-24, Ejerlejlighed ,7533, 2, 60 , 1936
+181,31," Valdemarsgade 44, 4. th, 1665 København V",215500,1995-01-25, Ejerlejlighed ,3716, 3, 58 , 1895
+182,32," C.F. Richs Vej 116, st. tv, 2000 Frederiksberg",375000,1995-01-26, Ejerlejlighed ,5769, 3, 65 , 1937
+183,33," Küchlersgade 20, 1774 København V",365000,1995-01-26, Rækkehus ,1984, 9, 184 , 1887
+184,34," Gerbrandsvej 4, st. 2, 2300 København S",230000,1995-01-26, Ejerlejlighed ,4600, 2, 50 , 1939
+185,35," Classensgade 19, 5. th, 2100 København Ø",1050000,1995-01-27, Ejerlejlighed ,6000, 5, 175 , 1909
+186,36," Fiskedamsgade 27, 3. tv, 2100 København Ø",614126,1995-01-28, Ejerlejlighed ,7059, 3, 87 , 1900
+187,37," Amaliegade 4B, 2, 1256 København K",550925,1995-01-29, Ejerlejlighed ,2611, 4, 211 , 1828
+188,38," Stockholmsgade 43, 2. th, 2100 København Ø",1680000,1995-01-29, Ejerlejlighed ,7119, 7, 236 , 1896
+189,39," Trondhjemsgade 12, 3. th, 2100 København Ø",1082000,1995-01-31, Ejerlejlighed ,6848, 5, 158 , 1932
+190,40," Venedigvej 2, 4. tv, 2300 København S",157094,1995-02-01, Ejerlejlighed ,1939, 3, 81 , 1932
+191,41," Rosenørns Alle 68, 5, 1970 Frederiksberg C",730000,1995-02-01, Ejerlejlighed ,5794, 5, 126 , 1906
+192,42," Danasvej 4, 2. tv, 1910 Frederiksberg C",615000,1995-02-01, Ejerlejlighed ,6910, 4, 89 , 1898
+193,43," Dalmosevej 12, 2400 København NV",1067045,1995-02-02, Villa ,7161, 5, 149 , 1934
+194,44," Løgstørgade 34, 4. th, 2100 København Ø",426890,1995-02-02, Ejerlejlighed ,6187, 2, 69 , 1916
+195,45," Ved Volden 8, 2. th, 1425 København K",388795,1995-02-02, Ejerlejlighed ,4272, 3, 91 , 1938
+196,46," Nygårdsvej 57, st. tv, 2100 København Ø",444000,1995-02-02, Ejerlejlighed ,6343, 3, 70 , 1964
+197,47," Sprogøvej 19, 4. th, 2000 Frederiksberg",600747,1995-02-04, Ejerlejlighed ,6530, 3, 92 , 1982
+198,48," Holsteinsgade 19, st. th, 2100 København Ø",672829,1995-02-04, Ejerlejlighed ,6230, 4, 108 , 1902
+199,49," Horsensgade 6, 1. th, 2100 København Ø",295160,1995-02-05, Ejerlejlighed ,4685, 2, 63 , 1908
+200,0," Platanvej 6, 9. 2, 1810 Frederiksberg C",471425,1995-01-01, Ejerlejlighed ,6548, 2, 72 , 1972
+201,1," Pileskellet 8, 2000 Frederiksberg",1009430,1995-01-01, Ejerlejlighed ,6349, 5, 159 , 1979
+202,2," Matthæusgade 46B, 5. 548, 1666 København V",168000,1995-01-01, Ejerlejlighed ,3231, 1, 52 , 1970
+203,3," Vestergade 13, 2, 1456 København K",830000,1995-01-02, Villa ,5887, 5, 141 , 1905
+204,4," Åboulevard 23, st. th, 1960 Frederiksberg C",299593,1995-01-03, Ejerlejlighed ,1958, 5, 124 , 1885
+205,5," Livjægergade 32, st. th, 2100 København Ø",451280,1995-01-03, Ejerlejlighed ,5712, 3, 79 , 1896
+206,6," Englandsvej 47, 1. tv, 2300 København S",384781,1995-01-04, Ejerlejlighed ,5743, 3, 67 , 1935
+207,7," Betty Nansens Alle 21, 3. tv, 2000 Frederiksberg",1100000,1995-01-05, Ejerlejlighed ,8527, 4, 129 , 1976
+208,8," Jyllandsvej 13, 2000 Frederiksberg",1522785,1995-01-05, Villa ,10877, 3, 140 , 1890
+209,9," Erantisvej 20, 2300 København S",810400,1995-01-05, Villa ,8024, 4, 101 , 1923
+210,10," Straussvej 14, st. th, 2450 København SV",176000,1995-01-09, Ejerlejlighed ,1892, 4, 93 , 1934
+211,11," Livjægergade 32, 1. tv, 2100 København Ø",465000,1995-01-10, Ejerlejlighed ,5741, 4, 81 , 1896
+212,12," Åboulevard 34E, 1. tv, 2200 København N",269000,1995-01-11, Ejerlejlighed ,6256, 2, 43 , 1885
+213,13," Ribegade 12, st. tv, 2100 København Ø",650680,1995-01-11, Ejerlejlighed ,5333, 4, 122 , 1904
+214,14," Bianco Lunos Alle 4B, 2. th, 1868 Frederiksberg C",464040,1995-01-11, Ejerlejlighed ,7139, 2, 65 , 1962
+215,15," Wibrandtsvej 19, 2300 København S",670876,1995-01-12, Villa ,7711, 2, 87 , 1934
+216,16," Jansvej 54, 2300 København S",555640,1995-01-15, Villa ,6106, 5, 91 , 1926
+217,17," Christianshavns Voldgade 43, 4. tv, 1424 København K",458280,1995-01-15, Ejerlejlighed ,3498, 4, 131 , 1850
+218,18," Gladiolusvej 25, 2300 København S",740000,1995-01-15, Villa ,7551, 3, 98 , 1976
+219,19," Prins Buris Vej 6, 2300 København S",850000,1995-01-16, Villa ,5944, 4, 143 , 1929
+220,20," Lærkeskellet 14, 2000 Frederiksberg",851840,1995-01-16, Ejerlejlighed ,6085, 4, 140 , 1978
+221,21," Hindustanvej 25, 2300 København S",608600,1995-01-16, Villa ,6916, 3, 88 , 1938
+222,22," Helgesensgade 1, 2. tv, 2100 København Ø",430000,1995-01-17, Ejerlejlighed ,3613, 6, 119 , 1895
+223,23," Maltagade 24, 4. th, 2300 København S",189000,1995-01-18, Ejerlejlighed ,3500, 2, 54 , 1934
+224,24," Helgesvej 19, 1. th, 2000 Frederiksberg",358000,1995-01-19, Ejerlejlighed ,3978, 3, 90 , 1893
+225,25," Havnegade 33, 5. th, 1058 København K",979120,1995-01-19, Ejerlejlighed ,6661, 3, 147 , 1870
+226,26," Jerichausgade 15, 1777 København V",820000,1995-01-22, Rækkehus ,5985, 6, 137 , 1893
+227,27," Sankelmarksgade 13, 5. tv, 1676 København V",464500,1995-01-22, Ejerlejlighed ,6112, 3, 76 , 1901
+228,28," Forchhammersvej 33, 2. tv, 1920 Frederiksberg C",555080,1995-01-23, Ejerlejlighed ,6168, 4, 90 , 1893
+229,29," Esromgade 12, 2. th, 2200 København N",961654,1995-01-24, Ejerlejlighed ,11727, 3, 82 , 1903
+230,30," C.F. Richs Vej 85, 3. tv, 2000 Frederiksberg",452000,1995-01-24, Ejerlejlighed ,7533, 2, 60 , 1936
+231,31," Valdemarsgade 44, 4. th, 1665 København V",215500,1995-01-25, Ejerlejlighed ,3716, 3, 58 , 1895
+232,32," C.F. Richs Vej 116, st. tv, 2000 Frederiksberg",375000,1995-01-26, Ejerlejlighed ,5769, 3, 65 , 1937
+233,33," Küchlersgade 20, 1774 København V",365000,1995-01-26, Rækkehus ,1984, 9, 184 , 1887
+234,34," Gerbrandsvej 4, st. 2, 2300 København S",230000,1995-01-26, Ejerlejlighed ,4600, 2, 50 , 1939
+235,35," Classensgade 19, 5. th, 2100 København Ø",1050000,1995-01-27, Ejerlejlighed ,6000, 5, 175 , 1909
+236,36," Fiskedamsgade 27, 3. tv, 2100 København Ø",614126,1995-01-28, Ejerlejlighed ,7059, 3, 87 , 1900
+237,37," Amaliegade 4B, 2, 1256 København K",550925,1995-01-29, Ejerlejlighed ,2611, 4, 211 , 1828
+238,38," Stockholmsgade 43, 2. th, 2100 København Ø",1680000,1995-01-29, Ejerlejlighed ,7119, 7, 236 , 1896
+239,39," Trondhjemsgade 12, 3. th, 2100 København Ø",1082000,1995-01-31, Ejerlejlighed ,6848, 5, 158 , 1932
+240,40," Venedigvej 2, 4. tv, 2300 København S",157094,1995-02-01, Ejerlejlighed ,1939, 3, 81 , 1932
+241,41," Rosenørns Alle 68, 5, 1970 Frederiksberg C",730000,1995-02-01, Ejerlejlighed ,5794, 5, 126 , 1906
+242,42," Danasvej 4, 2. tv, 1910 Frederiksberg C",615000,1995-02-01, Ejerlejlighed ,6910, 4, 89 , 1898
+243,43," Dalmosevej 12, 2400 København NV",1067045,1995-02-02, Villa ,7161, 5, 149 , 1934
+244,44," Løgstørgade 34, 4. th, 2100 København Ø",426890,1995-02-02, Ejerlejlighed ,6187, 2, 69 , 1916
+245,45," Ved Volden 8, 2. th, 1425 København K",388795,1995-02-02, Ejerlejlighed ,4272, 3, 91 , 1938
+246,46," Nygårdsvej 57, st. tv, 2100 København Ø",444000,1995-02-02, Ejerlejlighed ,6343, 3, 70 , 1964
+247,47," Sprogøvej 19, 4. th, 2000 Frederiksberg",600747,1995-02-04, Ejerlejlighed ,6530, 3, 92 , 1982
+248,48," Holsteinsgade 19, st. th, 2100 København Ø",672829,1995-02-04, Ejerlejlighed ,6230, 4, 108 , 1902
+249,49," Horsensgade 6, 1. th, 2100 København Ø",295160,1995-02-05, Ejerlejlighed ,4685, 2, 63 , 1908
+250,0," Platanvej 6, 9. 2, 1810 Frederiksberg C",471425,1995-01-01, Ejerlejlighed ,6548, 2, 72 , 1972
+251,1," Pileskellet 8, 2000 Frederiksberg",1009430,1995-01-01, Ejerlejlighed ,6349, 5, 159 , 1979
+252,2," Matthæusgade 46B, 5. 548, 1666 København V",168000,1995-01-01, Ejerlejlighed ,3231, 1, 52 , 1970
+253,3," Vestergade 13, 2, 1456 København K",830000,1995-01-02, Villa ,5887, 5, 141 , 1905
+254,4," Åboulevard 23, st. th, 1960 Frederiksberg C",299593,1995-01-03, Ejerlejlighed ,1958, 5, 124 , 1885
+255,5," Livjægergade 32, st. th, 2100 København Ø",451280,1995-01-03, Ejerlejlighed ,5712, 3, 79 , 1896
+256,6," Englandsvej 47, 1. tv, 2300 København S",384781,1995-01-04, Ejerlejlighed ,5743, 3, 67 , 1935
+257,7," Betty Nansens Alle 21, 3. tv, 2000 Frederiksberg",1100000,1995-01-05, Ejerlejlighed ,8527, 4, 129 , 1976
+258,8," Jyllandsvej 13, 2000 Frederiksberg",1522785,1995-01-05, Villa ,10877, 3, 140 , 1890
+259,9," Erantisvej 20, 2300 København S",810400,1995-01-05, Villa ,8024, 4, 101 , 1923
+260,10," Straussvej 14, st. th, 2450 København SV",176000,1995-01-09, Ejerlejlighed ,1892, 4, 93 , 1934
+261,11," Livjægergade 32, 1. tv, 2100 København Ø",465000,1995-01-10, Ejerlejlighed ,5741, 4, 81 , 1896
+262,12," Åboulevard 34E, 1. tv, 2200 København N",269000,1995-01-11, Ejerlejlighed ,6256, 2, 43 , 1885
+263,13," Ribegade 12, st. tv, 2100 København Ø",650680,1995-01-11, Ejerlejlighed ,5333, 4, 122 , 1904
+264,14," Bianco Lunos Alle 4B, 2. th, 1868 Frederiksberg C",464040,1995-01-11, Ejerlejlighed ,7139, 2, 65 , 1962
+265,15," Wibrandtsvej 19, 2300 København S",670876,1995-01-12, Villa ,7711, 2, 87 , 1934
+266,16," Jansvej 54, 2300 København S",555640,1995-01-15, Villa ,6106, 5, 91 , 1926
+267,17," Christianshavns Voldgade 43, 4. tv, 1424 København K",458280,1995-01-15, Ejerlejlighed ,3498, 4, 131 , 1850
+268,18," Gladiolusvej 25, 2300 København S",740000,1995-01-15, Villa ,7551, 3, 98 , 1976
+269,19," Prins Buris Vej 6, 2300 København S",850000,1995-01-16, Villa ,5944, 4, 143 , 1929
+270,20," Lærkeskellet 14, 2000 Frederiksberg",851840,1995-01-16, Ejerlejlighed ,6085, 4, 140 , 1978
+271,21," Hindustanvej 25, 2300 København S",608600,1995-01-16, Villa ,6916, 3, 88 , 1938
+272,22," Helgesensgade 1, 2. tv, 2100 København Ø",430000,1995-01-17, Ejerlejlighed ,3613, 6, 119 , 1895
+273,23," Maltagade 24, 4. th, 2300 København S",189000,1995-01-18, Ejerlejlighed ,3500, 2, 54 , 1934
+274,24," Helgesvej 19, 1. th, 2000 Frederiksberg",358000,1995-01-19, Ejerlejlighed ,3978, 3, 90 , 1893
+275,25," Havnegade 33, 5. th, 1058 København K",979120,1995-01-19, Ejerlejlighed ,6661, 3, 147 , 1870
+276,26," Jerichausgade 15, 1777 København V",820000,1995-01-22, Rækkehus ,5985, 6, 137 , 1893
+277,27," Sankelmarksgade 13, 5. tv, 1676 København V",464500,1995-01-22, Ejerlejlighed ,6112, 3, 76 , 1901
+278,28," Forchhammersvej 33, 2. tv, 1920 Frederiksberg C",555080,1995-01-23, Ejerlejlighed ,6168, 4, 90 , 1893
+279,29," Esromgade 12, 2. th, 2200 København N",961654,1995-01-24, Ejerlejlighed ,11727, 3, 82 , 1903
+280,30," C.F. Richs Vej 85, 3. tv, 2000 Frederiksberg",452000,1995-01-24, Ejerlejlighed ,7533, 2, 60 , 1936
+281,31," Valdemarsgade 44, 4. th, 1665 København V",215500,1995-01-25, Ejerlejlighed ,3716, 3, 58 , 1895
+282,32," C.F. Richs Vej 116, st. tv, 2000 Frederiksberg",375000,1995-01-26, Ejerlejlighed ,5769, 3, 65 , 1937
+283,33," Küchlersgade 20, 1774 København V",365000,1995-01-26, Rækkehus ,1984, 9, 184 , 1887
+284,34," Gerbrandsvej 4, st. 2, 2300 København S",230000,1995-01-26, Ejerlejlighed ,4600, 2, 50 , 1939
+285,35," Classensgade 19, 5. th, 2100 København Ø",1050000,1995-01-27, Ejerlejlighed ,6000, 5, 175 , 1909
+286,36," Fiskedamsgade 27, 3. tv, 2100 København Ø",614126,1995-01-28, Ejerlejlighed ,7059, 3, 87 , 1900
+287,37," Amaliegade 4B, 2, 1256 København K",550925,1995-01-29, Ejerlejlighed ,2611, 4, 211 , 1828
+288,38," Stockholmsgade 43, 2. th, 2100 København Ø",1680000,1995-01-29, Ejerlejlighed ,7119, 7, 236 , 1896
+289,39," Trondhjemsgade 12, 3. th, 2100 København Ø",1082000,1995-01-31, Ejerlejlighed ,6848, 5, 158 , 1932
+290,40," Venedigvej 2, 4. tv, 2300 København S",157094,1995-02-01, Ejerlejlighed ,1939, 3, 81 , 1932
+291,41," Rosenørns Alle 68, 5, 1970 Frederiksberg C",730000,1995-02-01, Ejerlejlighed ,5794, 5, 126 , 1906
+292,42," Danasvej 4, 2. tv, 1910 Frederiksberg C",615000,1995-02-01, Ejerlejlighed ,6910, 4, 89 , 1898
+293,43," Dalmosevej 12, 2400 København NV",1067045,1995-02-02, Villa ,7161, 5, 149 , 1934
+294,44," Løgstørgade 34, 4. th, 2100 København Ø",426890,1995-02-02, Ejerlejlighed ,6187, 2, 69 , 1916
+295,45," Ved Volden 8, 2. th, 1425 København K",388795,1995-02-02, Ejerlejlighed ,4272, 3, 91 , 1938
+296,46," Nygårdsvej 57, st. tv, 2100 København Ø",444000,1995-02-02, Ejerlejlighed ,6343, 3, 70 , 1964
+297,47," Sprogøvej 19, 4. th, 2000 Frederiksberg",600747,1995-02-04, Ejerlejlighed ,6530, 3, 92 , 1982
+298,48," Holsteinsgade 19, st. th, 2100 København Ø",672829,1995-02-04, Ejerlejlighed ,6230, 4, 108 , 1902
+299,49," Horsensgade 6, 1. th, 2100 København Ø",295160,1995-02-05, Ejerlejlighed ,4685, 2, 63 , 1908
+300,0," Platanvej 6, 9. 2, 1810 Frederiksberg C",471425,1995-01-01, Ejerlejlighed ,6548, 2, 72 , 1972
+301,1," Pileskellet 8, 2000 Frederiksberg",1009430,1995-01-01, Ejerlejlighed ,6349, 5, 159 , 1979
+302,2," Matthæusgade 46B, 5. 548, 1666 København V",168000,1995-01-01, Ejerlejlighed ,3231, 1, 52 , 1970
+303,3," Vestergade 13, 2, 1456 København K",830000,1995-01-02, Villa ,5887, 5, 141 , 1905
+304,4," Åboulevard 23, st. th, 1960 Frederiksberg C",299593,1995-01-03, Ejerlejlighed ,1958, 5, 124 , 1885
+305,5," Livjægergade 32, st. th, 2100 København Ø",451280,1995-01-03, Ejerlejlighed ,5712, 3, 79 , 1896
+306,6," Englandsvej 47, 1. tv, 2300 København S",384781,1995-01-04, Ejerlejlighed ,5743, 3, 67 , 1935
+307,7," Betty Nansens Alle 21, 3. tv, 2000 Frederiksberg",1100000,1995-01-05, Ejerlejlighed ,8527, 4, 129 , 1976
+308,8," Jyllandsvej 13, 2000 Frederiksberg",1522785,1995-01-05, Villa ,10877, 3, 140 , 1890
+309,9," Erantisvej 20, 2300 København S",810400,1995-01-05, Villa ,8024, 4, 101 , 1923
+310,10," Straussvej 14, st. th, 2450 København SV",176000,1995-01-09, Ejerlejlighed ,1892, 4, 93 , 1934
+311,11," Livjægergade 32, 1. tv, 2100 København Ø",465000,1995-01-10, Ejerlejlighed ,5741, 4, 81 , 1896
+312,12," Åboulevard 34E, 1. tv, 2200 København N",269000,1995-01-11, Ejerlejlighed ,6256, 2, 43 , 1885
+313,13," Ribegade 12, st. tv, 2100 København Ø",650680,1995-01-11, Ejerlejlighed ,5333, 4, 122 , 1904
+314,14," Bianco Lunos Alle 4B, 2. th, 1868 Frederiksberg C",464040,1995-01-11, Ejerlejlighed ,7139, 2, 65 , 1962
+315,15," Wibrandtsvej 19, 2300 København S",670876,1995-01-12, Villa ,7711, 2, 87 , 1934
+316,16," Jansvej 54, 2300 København S",555640,1995-01-15, Villa ,6106, 5, 91 , 1926
+317,17," Christianshavns Voldgade 43, 4. tv, 1424 København K",458280,1995-01-15, Ejerlejlighed ,3498, 4, 131 , 1850
+318,18," Gladiolusvej 25, 2300 København S",740000,1995-01-15, Villa ,7551, 3, 98 , 1976
+319,19," Prins Buris Vej 6, 2300 København S",850000,1995-01-16, Villa ,5944, 4, 143 , 1929
+320,20," Lærkeskellet 14, 2000 Frederiksberg",851840,1995-01-16, Ejerlejlighed ,6085, 4, 140 , 1978
+321,21," Hindustanvej 25, 2300 København S",608600,1995-01-16, Villa ,6916, 3, 88 , 1938
+322,22," Helgesensgade 1, 2. tv, 2100 København Ø",430000,1995-01-17, Ejerlejlighed ,3613, 6, 119 , 1895
+323,23," Maltagade 24, 4. th, 2300 København S",189000,1995-01-18, Ejerlejlighed ,3500, 2, 54 , 1934
+324,24," Helgesvej 19, 1. th, 2000 Frederiksberg",358000,1995-01-19, Ejerlejlighed ,3978, 3, 90 , 1893
+325,25," Havnegade 33, 5. th, 1058 København K",979120,1995-01-19, Ejerlejlighed ,6661, 3, 147 , 1870
+326,26," Jerichausgade 15, 1777 København V",820000,1995-01-22, Rækkehus ,5985, 6, 137 , 1893
+327,27," Sankelmarksgade 13, 5. tv, 1676 København V",464500,1995-01-22, Ejerlejlighed ,6112, 3, 76 , 1901
+328,28," Forchhammersvej 33, 2. tv, 1920 Frederiksberg C",555080,1995-01-23, Ejerlejlighed ,6168, 4, 90 , 1893
+329,29," Esromgade 12, 2. th, 2200 København N",961654,1995-01-24, Ejerlejlighed ,11727, 3, 82 , 1903
+330,30," C.F. Richs Vej 85, 3. tv, 2000 Frederiksberg",452000,1995-01-24, Ejerlejlighed ,7533, 2, 60 , 1936
+331,31," Valdemarsgade 44, 4. th, 1665 København V",215500,1995-01-25, Ejerlejlighed ,3716, 3, 58 , 1895
+332,32," C.F. Richs Vej 116, st. tv, 2000 Frederiksberg",375000,1995-01-26, Ejerlejlighed ,5769, 3, 65 , 1937
+333,33," Küchlersgade 20, 1774 København V",365000,1995-01-26, Rækkehus ,1984, 9, 184 , 1887
+334,34," Gerbrandsvej 4, st. 2, 2300 København S",230000,1995-01-26, Ejerlejlighed ,4600, 2, 50 , 1939
+335,35," Classensgade 19, 5. th, 2100 København Ø",1050000,1995-01-27, Ejerlejlighed ,6000, 5, 175 , 1909
+336,36," Fiskedamsgade 27, 3. tv, 2100 København Ø",614126,1995-01-28, Ejerlejlighed ,7059, 3, 87 , 1900
+337,37," Amaliegade 4B, 2, 1256 København K",550925,1995-01-29, Ejerlejlighed ,2611, 4, 211 , 1828
+338,38," Stockholmsgade 43, 2. th, 2100 København Ø",1680000,1995-01-29, Ejerlejlighed ,7119, 7, 236 , 1896
+339,39," Trondhjemsgade 12, 3. th, 2100 København Ø",1082000,1995-01-31, Ejerlejlighed ,6848, 5, 158 , 1932
+340,40," Venedigvej 2, 4. tv, 2300 København S",157094,1995-02-01, Ejerlejlighed ,1939, 3, 81 , 1932
+341,41," Rosenørns Alle 68, 5, 1970 Frederiksberg C",730000,1995-02-01, Ejerlejlighed ,5794, 5, 126 , 1906
+342,42," Danasvej 4, 2. tv, 1910 Frederiksberg C",615000,1995-02-01, Ejerlejlighed ,6910, 4, 89 , 1898
+343,43," Dalmosevej 12, 2400 København NV",1067045,1995-02-02, Villa ,7161, 5, 149 , 1934
+344,44," Løgstørgade 34, 4. th, 2100 København Ø",426890,1995-02-02, Ejerlejlighed ,6187, 2, 69 , 1916
+345,45," Ved Volden 8, 2. th, 1425 København K",388795,1995-02-02, Ejerlejlighed ,4272, 3, 91 , 1938
+346,46," Nygårdsvej 57, st. tv, 2100 København Ø",444000,1995-02-02, Ejerlejlighed ,6343, 3, 70 , 1964
+347,47," Sprogøvej 19, 4. th, 2000 Frederiksberg",600747,1995-02-04, Ejerlejlighed ,6530, 3, 92 , 1982
+348,48," Holsteinsgade 19, st. th, 2100 København Ø",672829,1995-02-04, Ejerlejlighed ,6230, 4, 108 , 1902
+349,49," Horsensgade 6, 1. th, 2100 København Ø",295160,1995-02-05, Ejerlejlighed ,4685, 2, 63 , 1908
+350,0," Platanvej 6, 9. 2, 1810 Frederiksberg C",471425,1995-01-01, Ejerlejlighed ,6548, 2, 72 , 1972
+351,1," Pileskellet 8, 2000 Frederiksberg",1009430,1995-01-01, Ejerlejlighed ,6349, 5, 159 , 1979
+352,2," Matthæusgade 46B, 5. 548, 1666 København V",168000,1995-01-01, Ejerlejlighed ,3231, 1, 52 , 1970
+353,3," Vestergade 13, 2, 1456 København K",830000,1995-01-02, Villa ,5887, 5, 141 , 1905
+354,4," Åboulevard 23, st. th, 1960 Frederiksberg C",299593,1995-01-03, Ejerlejlighed ,1958, 5, 124 , 1885
+355,5," Livjægergade 32, st. th, 2100 København Ø",451280,1995-01-03, Ejerlejlighed ,5712, 3, 79 , 1896
+356,6," Englandsvej 47, 1. tv, 2300 København S",384781,1995-01-04, Ejerlejlighed ,5743, 3, 67 , 1935
+357,7," Betty Nansens Alle 21, 3. tv, 2000 Frederiksberg",1100000,1995-01-05, Ejerlejlighed ,8527, 4, 129 , 1976
+358,8," Jyllandsvej 13, 2000 Frederiksberg",1522785,1995-01-05, Villa ,10877, 3, 140 , 1890
+359,9," Erantisvej 20, 2300 København S",810400,1995-01-05, Villa ,8024, 4, 101 , 1923
+360,10," Straussvej 14, st. th, 2450 København SV",176000,1995-01-09, Ejerlejlighed ,1892, 4, 93 , 1934
+361,11," Livjægergade 32, 1. tv, 2100 København Ø",465000,1995-01-10, Ejerlejlighed ,5741, 4, 81 , 1896
+362,12," Åboulevard 34E, 1. tv, 2200 København N",269000,1995-01-11, Ejerlejlighed ,6256, 2, 43 , 1885
+363,13," Ribegade 12, st. tv, 2100 København Ø",650680,1995-01-11, Ejerlejlighed ,5333, 4, 122 , 1904
+364,14," Bianco Lunos Alle 4B, 2. th, 1868 Frederiksberg C",464040,1995-01-11, Ejerlejlighed ,7139, 2, 65 , 1962
+365,15," Wibrandtsvej 19, 2300 København S",670876,1995-01-12, Villa ,7711, 2, 87 , 1934
+366,16," Jansvej 54, 2300 København S",555640,1995-01-15, Villa ,6106, 5, 91 , 1926
+367,17," Christianshavns Voldgade 43, 4. tv, 1424 København K",458280,1995-01-15, Ejerlejlighed ,3498, 4, 131 , 1850
+368,18," Gladiolusvej 25, 2300 København S",740000,1995-01-15, Villa ,7551, 3, 98 , 1976
+369,19," Prins Buris Vej 6, 2300 København S",850000,1995-01-16, Villa ,5944, 4, 143 , 1929
+370,20," Lærkeskellet 14, 2000 Frederiksberg",851840,1995-01-16, Ejerlejlighed ,6085, 4, 140 , 1978
+371,21," Hindustanvej 25, 2300 København S",608600,1995-01-16, Villa ,6916, 3, 88 , 1938
+372,22," Helgesensgade 1, 2. tv, 2100 København Ø",430000,1995-01-17, Ejerlejlighed ,3613, 6, 119 , 1895
+373,23," Maltagade 24, 4. th, 2300 København S",189000,1995-01-18, Ejerlejlighed ,3500, 2, 54 , 1934
+374,24," Helgesvej 19, 1. th, 2000 Frederiksberg",358000,1995-01-19, Ejerlejlighed ,3978, 3, 90 , 1893
+375,25," Havnegade 33, 5. th, 1058 København K",979120,1995-01-19, Ejerlejlighed ,6661, 3, 147 , 1870
+376,26," Jerichausgade 15, 1777 København V",820000,1995-01-22, Rækkehus ,5985, 6, 137 , 1893
+377,27," Sankelmarksgade 13, 5. tv, 1676 København V",464500,1995-01-22, Ejerlejlighed ,6112, 3, 76 , 1901
+378,28," Forchhammersvej 33, 2. tv, 1920 Frederiksberg C",555080,1995-01-23, Ejerlejlighed ,6168, 4, 90 , 1893
+379,29," Esromgade 12, 2. th, 2200 København N",961654,1995-01-24, Ejerlejlighed ,11727, 3, 82 , 1903
+380,30," C.F. Richs Vej 85, 3. tv, 2000 Frederiksberg",452000,1995-01-24, Ejerlejlighed ,7533, 2, 60 , 1936
+381,31," Valdemarsgade 44, 4. th, 1665 København V",215500,1995-01-25, Ejerlejlighed ,3716, 3, 58 , 1895
+382,32," C.F. Richs Vej 116, st. tv, 2000 Frederiksberg",375000,1995-01-26, Ejerlejlighed ,5769, 3, 65 , 1937
+383,33," Küchlersgade 20, 1774 København V",365000,1995-01-26, Rækkehus ,1984, 9, 184 , 1887
+384,34," Gerbrandsvej 4, st. 2, 2300 København S",230000,1995-01-26, Ejerlejlighed ,4600, 2, 50 , 1939
+385,35," Classensgade 19, 5. th, 2100 København Ø",1050000,1995-01-27, Ejerlejlighed ,6000, 5, 175 , 1909
+386,36," Fiskedamsgade 27, 3. tv, 2100 København Ø",614126,1995-01-28, Ejerlejlighed ,7059, 3, 87 , 1900
+387,37," Amaliegade 4B, 2, 1256 København K",550925,1995-01-29, Ejerlejlighed ,2611, 4, 211 , 1828
+388,38," Stockholmsgade 43, 2. th, 2100 København Ø",1680000,1995-01-29, Ejerlejlighed ,7119, 7, 236 , 1896
+389,39," Trondhjemsgade 12, 3. th, 2100 København Ø",1082000,1995-01-31, Ejerlejlighed ,6848, 5, 158 , 1932
+390,40," Venedigvej 2, 4. tv, 2300 København S",157094,1995-02-01, Ejerlejlighed ,1939, 3, 81 , 1932
+391,41," Rosenørns Alle 68, 5, 1970 Frederiksberg C",730000,1995-02-01, Ejerlejlighed ,5794, 5, 126 , 1906
+392,42," Danasvej 4, 2. tv, 1910 Frederiksberg C",615000,1995-02-01, Ejerlejlighed ,6910, 4, 89 , 1898
+393,43," Dalmosevej 12, 2400 København NV",1067045,1995-02-02, Villa ,7161, 5, 149 , 1934
+394,44," Løgstørgade 34, 4. th, 2100 København Ø",426890,1995-02-02, Ejerlejlighed ,6187, 2, 69 , 1916
+395,45," Ved Volden 8, 2. th, 1425 København K",388795,1995-02-02, Ejerlejlighed ,4272, 3, 91 , 1938
+396,46," Nygårdsvej 57, st. tv, 2100 København Ø",444000,1995-02-02, Ejerlejlighed ,6343, 3, 70 , 1964
+397,47," Sprogøvej 19, 4. th, 2000 Frederiksberg",600747,1995-02-04, Ejerlejlighed ,6530, 3, 92 , 1982
+398,48," Holsteinsgade 19, st. th, 2100 København Ø",672829,1995-02-04, Ejerlejlighed ,6230, 4, 108 , 1902
+399,49," Horsensgade 6, 1. th, 2100 København Ø",295160,1995-02-05, Ejerlejlighed ,4685, 2, 63 , 1908
+400,0," Platanvej 6, 9. 2, 1810 Frederiksberg C",471425,1995-01-01, Ejerlejlighed ,6548, 2, 72 , 1972
+401,1," Pileskellet 8, 2000 Frederiksberg",1009430,1995-01-01, Ejerlejlighed ,6349, 5, 159 , 1979
+402,2," Matthæusgade 46B, 5. 548, 1666 København V",168000,1995-01-01, Ejerlejlighed ,3231, 1, 52 , 1970
+403,3," Vestergade 13, 2, 1456 København K",830000,1995-01-02, Villa ,5887, 5, 141 , 1905
+404,4," Åboulevard 23, st. th, 1960 Frederiksberg C",299593,1995-01-03, Ejerlejlighed ,1958, 5, 124 , 1885
+405,5," Livjægergade 32, st. th, 2100 København Ø",451280,1995-01-03, Ejerlejlighed ,5712, 3, 79 , 1896
+406,6," Englandsvej 47, 1. tv, 2300 København S",384781,1995-01-04, Ejerlejlighed ,5743, 3, 67 , 1935
+407,7," Betty Nansens Alle 21, 3. tv, 2000 Frederiksberg",1100000,1995-01-05, Ejerlejlighed ,8527, 4, 129 , 1976
+408,8," Jyllandsvej 13, 2000 Frederiksberg",1522785,1995-01-05, Villa ,10877, 3, 140 , 1890
+409,9," Erantisvej 20, 2300 København S",810400,1995-01-05, Villa ,8024, 4, 101 , 1923
+410,10," Straussvej 14, st. th, 2450 København SV",176000,1995-01-09, Ejerlejlighed ,1892, 4, 93 , 1934
+411,11," Livjægergade 32, 1. tv, 2100 København Ø",465000,1995-01-10, Ejerlejlighed ,5741, 4, 81 , 1896
+412,12," Åboulevard 34E, 1. tv, 2200 København N",269000,1995-01-11, Ejerlejlighed ,6256, 2, 43 , 1885
+413,13," Ribegade 12, st. tv, 2100 København Ø",650680,1995-01-11, Ejerlejlighed ,5333, 4, 122 , 1904
+414,14," Bianco Lunos Alle 4B, 2. th, 1868 Frederiksberg C",464040,1995-01-11, Ejerlejlighed ,7139, 2, 65 , 1962
+415,15," Wibrandtsvej 19, 2300 København S",670876,1995-01-12, Villa ,7711, 2, 87 , 1934
+416,16," Jansvej 54, 2300 København S",555640,1995-01-15, Villa ,6106, 5, 91 , 1926
+417,17," Christianshavns Voldgade 43, 4. tv, 1424 København K",458280,1995-01-15, Ejerlejlighed ,3498, 4, 131 , 1850
+418,18," Gladiolusvej 25, 2300 København S",740000,1995-01-15, Villa ,7551, 3, 98 , 1976
+419,19," Prins Buris Vej 6, 2300 København S",850000,1995-01-16, Villa ,5944, 4, 143 , 1929
+420,20," Lærkeskellet 14, 2000 Frederiksberg",851840,1995-01-16, Ejerlejlighed ,6085, 4, 140 , 1978
+421,21," Hindustanvej 25, 2300 København S",608600,1995-01-16, Villa ,6916, 3, 88 , 1938
+422,22," Helgesensgade 1, 2. tv, 2100 København Ø",430000,1995-01-17, Ejerlejlighed ,3613, 6, 119 , 1895
+423,23," Maltagade 24, 4. th, 2300 København S",189000,1995-01-18, Ejerlejlighed ,3500, 2, 54 , 1934
+424,24," Helgesvej 19, 1. th, 2000 Frederiksberg",358000,1995-01-19, Ejerlejlighed ,3978, 3, 90 , 1893
+425,25," Havnegade 33, 5. th, 1058 København K",979120,1995-01-19, Ejerlejlighed ,6661, 3, 147 , 1870
+426,26," Jerichausgade 15, 1777 København V",820000,1995-01-22, Rækkehus ,5985, 6, 137 , 1893
+427,27," Sankelmarksgade 13, 5. tv, 1676 København V",464500,1995-01-22, Ejerlejlighed ,6112, 3, 76 , 1901
+428,28," Forchhammersvej 33, 2. tv, 1920 Frederiksberg C",555080,1995-01-23, Ejerlejlighed ,6168, 4, 90 , 1893
+429,29," Esromgade 12, 2. th, 2200 København N",961654,1995-01-24, Ejerlejlighed ,11727, 3, 82 , 1903
+430,30," C.F. Richs Vej 85, 3. tv, 2000 Frederiksberg",452000,1995-01-24, Ejerlejlighed ,7533, 2, 60 , 1936
+431,31," Valdemarsgade 44, 4. th, 1665 København V",215500,1995-01-25, Ejerlejlighed ,3716, 3, 58 , 1895
+432,32," C.F. Richs Vej 116, st. tv, 2000 Frederiksberg",375000,1995-01-26, Ejerlejlighed ,5769, 3, 65 , 1937
+433,33," Küchlersgade 20, 1774 København V",365000,1995-01-26, Rækkehus ,1984, 9, 184 , 1887
+434,34," Gerbrandsvej 4, st. 2, 2300 København S",230000,1995-01-26, Ejerlejlighed ,4600, 2, 50 , 1939
+435,35," Classensgade 19, 5. th, 2100 København Ø",1050000,1995-01-27, Ejerlejlighed ,6000, 5, 175 , 1909
+436,36," Fiskedamsgade 27, 3. tv, 2100 København Ø",614126,1995-01-28, Ejerlejlighed ,7059, 3, 87 , 1900
+437,37," Amaliegade 4B, 2, 1256 København K",550925,1995-01-29, Ejerlejlighed ,2611, 4, 211 , 1828
+438,38," Stockholmsgade 43, 2. th, 2100 København Ø",1680000,1995-01-29, Ejerlejlighed ,7119, 7, 236 , 1896
+439,39," Trondhjemsgade 12, 3. th, 2100 København Ø",1082000,1995-01-31, Ejerlejlighed ,6848, 5, 158 , 1932
+440,40," Venedigvej 2, 4. tv, 2300 København S",157094,1995-02-01, Ejerlejlighed ,1939, 3, 81 , 1932
+441,41," Rosenørns Alle 68, 5, 1970 Frederiksberg C",730000,1995-02-01, Ejerlejlighed ,5794, 5, 126 , 1906
+442,42," Danasvej 4, 2. tv, 1910 Frederiksberg C",615000,1995-02-01, Ejerlejlighed ,6910, 4, 89 , 1898
+443,43," Dalmosevej 12, 2400 København NV",1067045,1995-02-02, Villa ,7161, 5, 149 , 1934
+444,44," Løgstørgade 34, 4. th, 2100 København Ø",426890,1995-02-02, Ejerlejlighed ,6187, 2, 69 , 1916
+445,45," Ved Volden 8, 2. th, 1425 København K",388795,1995-02-02, Ejerlejlighed ,4272, 3, 91 , 1938
+446,46," Nygårdsvej 57, st. tv, 2100 København Ø",444000,1995-02-02, Ejerlejlighed ,6343, 3, 70 , 1964
+447,47," Sprogøvej 19, 4. th, 2000 Frederiksberg",600747,1995-02-04, Ejerlejlighed ,6530, 3, 92 , 1982
+448,48," Holsteinsgade 19, st. th, 2100 København Ø",672829,1995-02-04, Ejerlejlighed ,6230, 4, 108 , 1902
+449,49," Horsensgade 6, 1. th, 2100 København Ø",295160,1995-02-05, Ejerlejlighed ,4685, 2, 63 , 1908
+450,0," Platanvej 6, 9. 2, 1810 Frederiksberg C",471425,1995-01-01, Ejerlejlighed ,6548, 2, 72 , 1972
+451,1," Pileskellet 8, 2000 Frederiksberg",1009430,1995-01-01, Ejerlejlighed ,6349, 5, 159 , 1979
+452,2," Matthæusgade 46B, 5. 548, 1666 København V",168000,1995-01-01, Ejerlejlighed ,3231, 1, 52 , 1970
+453,3," Vestergade 13, 2, 1456 København K",830000,1995-01-02, Villa ,5887, 5, 141 , 1905
+454,4," Åboulevard 23, st. th, 1960 Frederiksberg C",299593,1995-01-03, Ejerlejlighed ,1958, 5, 124 , 1885
+455,5," Livjægergade 32, st. th, 2100 København Ø",451280,1995-01-03, Ejerlejlighed ,5712, 3, 79 , 1896
+456,6," Englandsvej 47, 1. tv, 2300 København S",384781,1995-01-04, Ejerlejlighed ,5743, 3, 67 , 1935
+457,7," Betty Nansens Alle 21, 3. tv, 2000 Frederiksberg",1100000,1995-01-05, Ejerlejlighed ,8527, 4, 129 , 1976
+458,8," Jyllandsvej 13, 2000 Frederiksberg",1522785,1995-01-05, Villa ,10877, 3, 140 , 1890
+459,9," Erantisvej 20, 2300 København S",810400,1995-01-05, Villa ,8024, 4, 101 , 1923
+460,10," Straussvej 14, st. th, 2450 København SV",176000,1995-01-09, Ejerlejlighed ,1892, 4, 93 , 1934
+461,11," Livjægergade 32, 1. tv, 2100 København Ø",465000,1995-01-10, Ejerlejlighed ,5741, 4, 81 , 1896
+462,12," Åboulevard 34E, 1. tv, 2200 København N",269000,1995-01-11, Ejerlejlighed ,6256, 2, 43 , 1885
+463,13," Ribegade 12, st. tv, 2100 København Ø",650680,1995-01-11, Ejerlejlighed ,5333, 4, 122 , 1904
+464,14," Bianco Lunos Alle 4B, 2. th, 1868 Frederiksberg C",464040,1995-01-11, Ejerlejlighed ,7139, 2, 65 , 1962
+465,15," Wibrandtsvej 19, 2300 København S",670876,1995-01-12, Villa ,7711, 2, 87 , 1934
+466,16," Jansvej 54, 2300 København S",555640,1995-01-15, Villa ,6106, 5, 91 , 1926
+467,17," Christianshavns Voldgade 43, 4. tv, 1424 København K",458280,1995-01-15, Ejerlejlighed ,3498, 4, 131 , 1850
+468,18," Gladiolusvej 25, 2300 København S",740000,1995-01-15, Villa ,7551, 3, 98 , 1976
+469,19," Prins Buris Vej 6, 2300 København S",850000,1995-01-16, Villa ,5944, 4, 143 , 1929
+470,20," Lærkeskellet 14, 2000 Frederiksberg",851840,1995-01-16, Ejerlejlighed ,6085, 4, 140 , 1978
+471,21," Hindustanvej 25, 2300 København S",608600,1995-01-16, Villa ,6916, 3, 88 , 1938
+472,22," Helgesensgade 1, 2. tv, 2100 København Ø",430000,1995-01-17, Ejerlejlighed ,3613, 6, 119 , 1895
+473,23," Maltagade 24, 4. th, 2300 København S",189000,1995-01-18, Ejerlejlighed ,3500, 2, 54 , 1934
+474,24," Helgesvej 19, 1. th, 2000 Frederiksberg",358000,1995-01-19, Ejerlejlighed ,3978, 3, 90 , 1893
+475,25," Havnegade 33, 5. th, 1058 København K",979120,1995-01-19, Ejerlejlighed ,6661, 3, 147 , 1870
+476,26," Jerichausgade 15, 1777 København V",820000,1995-01-22, Rækkehus ,5985, 6, 137 , 1893
+477,27," Sankelmarksgade 13, 5. tv, 1676 København V",464500,1995-01-22, Ejerlejlighed ,6112, 3, 76 , 1901
+478,28," Forchhammersvej 33, 2. tv, 1920 Frederiksberg C",555080,1995-01-23, Ejerlejlighed ,6168, 4, 90 , 1893
+479,29," Esromgade 12, 2. th, 2200 København N",961654,1995-01-24, Ejerlejlighed ,11727, 3, 82 , 1903
+480,30," C.F. Richs Vej 85, 3. tv, 2000 Frederiksberg",452000,1995-01-24, Ejerlejlighed ,7533, 2, 60 , 1936
+481,31," Valdemarsgade 44, 4. th, 1665 København V",215500,1995-01-25, Ejerlejlighed ,3716, 3, 58 , 1895
+482,32," C.F. Richs Vej 116, st. tv, 2000 Frederiksberg",375000,1995-01-26, Ejerlejlighed ,5769, 3, 65 , 1937
+483,33," Küchlersgade 20, 1774 København V",365000,1995-01-26, Rækkehus ,1984, 9, 184 , 1887
+484,34," Gerbrandsvej 4, st. 2, 2300 København S",230000,1995-01-26, Ejerlejlighed ,4600, 2, 50 , 1939
+485,35," Classensgade 19, 5. th, 2100 København Ø",1050000,1995-01-27, Ejerlejlighed ,6000, 5, 175 , 1909
+486,36," Fiskedamsgade 27, 3. tv, 2100 København Ø",614126,1995-01-28, Ejerlejlighed ,7059, 3, 87 , 1900
+487,37," Amaliegade 4B, 2, 1256 København K",550925,1995-01-29, Ejerlejlighed ,2611, 4, 211 , 1828
+488,38," Stockholmsgade 43, 2. th, 2100 København Ø",1680000,1995-01-29, Ejerlejlighed ,7119, 7, 236 , 1896
+489,39," Trondhjemsgade 12, 3. th, 2100 København Ø",1082000,1995-01-31, Ejerlejlighed ,6848, 5, 158 , 1932
+490,40," Venedigvej 2, 4. tv, 2300 København S",157094,1995-02-01, Ejerlejlighed ,1939, 3, 81 , 1932
+491,41," Rosenørns Alle 68, 5, 1970 Frederiksberg C",730000,1995-02-01, Ejerlejlighed ,5794, 5, 126 , 1906
+492,42," Danasvej 4, 2. tv, 1910 Frederiksberg C",615000,1995-02-01, Ejerlejlighed ,6910, 4, 89 , 1898
+493,43," Dalmosevej 12, 2400 København NV",1067045,1995-02-02, Villa ,7161, 5, 149 , 1934
+494,44," Løgstørgade 34, 4. th, 2100 København Ø",426890,1995-02-02, Ejerlejlighed ,6187, 2, 69 , 1916
+495,45," Ved Volden 8, 2. th, 1425 København K",388795,1995-02-02, Ejerlejlighed ,4272, 3, 91 , 1938
+496,46," Nygårdsvej 57, st. tv, 2100 København Ø",444000,1995-02-02, Ejerlejlighed ,6343, 3, 70 , 1964
+497,47," Sprogøvej 19, 4. th, 2000 Frederiksberg",600747,1995-02-04, Ejerlejlighed ,6530, 3, 92 , 1982
+498,48," Holsteinsgade 19, st. th, 2100 København Ø",672829,1995-02-04, Ejerlejlighed ,6230, 4, 108 , 1902
+499,49," Horsensgade 6, 1. th, 2100 København Ø",295160,1995-02-05, Ejerlejlighed ,4685, 2, 63 , 1908
+500,0," Platanvej 6, 9. 2, 1810 Frederiksberg C",471425,1995-01-01, Ejerlejlighed ,6548, 2, 72 , 1972
+501,1," Pileskellet 8, 2000 Frederiksberg",1009430,1995-01-01, Ejerlejlighed ,6349, 5, 159 , 1979
+502,2," Matthæusgade 46B, 5. 548, 1666 København V",168000,1995-01-01, Ejerlejlighed ,3231, 1, 52 , 1970
+503,3," Vestergade 13, 2, 1456 København K",830000,1995-01-02, Villa ,5887, 5, 141 , 1905
+504,4," Åboulevard 23, st. th, 1960 Frederiksberg C",299593,1995-01-03, Ejerlejlighed ,1958, 5, 124 , 1885
+505,5," Livjægergade 32, st. th, 2100 København Ø",451280,1995-01-03, Ejerlejlighed ,5712, 3, 79 , 1896
+506,6," Englandsvej 47, 1. tv, 2300 København S",384781,1995-01-04, Ejerlejlighed ,5743, 3, 67 , 1935
+507,7," Betty Nansens Alle 21, 3. tv, 2000 Frederiksberg",1100000,1995-01-05, Ejerlejlighed ,8527, 4, 129 , 1976
+508,8," Jyllandsvej 13, 2000 Frederiksberg",1522785,1995-01-05, Villa ,10877, 3, 140 , 1890
+509,9," Erantisvej 20, 2300 København S",810400,1995-01-05, Villa ,8024, 4, 101 , 1923
+510,10," Straussvej 14, st. th, 2450 København SV",176000,1995-01-09, Ejerlejlighed ,1892, 4, 93 , 1934
+511,11," Livjægergade 32, 1. tv, 2100 København Ø",465000,1995-01-10, Ejerlejlighed ,5741, 4, 81 , 1896
+512,12," Åboulevard 34E, 1. tv, 2200 København N",269000,1995-01-11, Ejerlejlighed ,6256, 2, 43 , 1885
+513,13," Ribegade 12, st. tv, 2100 København Ø",650680,1995-01-11, Ejerlejlighed ,5333, 4, 122 , 1904
+514,14," Bianco Lunos Alle 4B, 2. th, 1868 Frederiksberg C",464040,1995-01-11, Ejerlejlighed ,7139, 2, 65 , 1962
+515,15," Wibrandtsvej 19, 2300 København S",670876,1995-01-12, Villa ,7711, 2, 87 , 1934
+516,16," Jansvej 54, 2300 København S",555640,1995-01-15, Villa ,6106, 5, 91 , 1926
+517,17," Christianshavns Voldgade 43, 4. tv, 1424 København K",458280,1995-01-15, Ejerlejlighed ,3498, 4, 131 , 1850
+518,18," Gladiolusvej 25, 2300 København S",740000,1995-01-15, Villa ,7551, 3, 98 , 1976
+519,19," Prins Buris Vej 6, 2300 København S",850000,1995-01-16, Villa ,5944, 4, 143 , 1929
+520,20," Lærkeskellet 14, 2000 Frederiksberg",851840,1995-01-16, Ejerlejlighed ,6085, 4, 140 , 1978
+521,21," Hindustanvej 25, 2300 København S",608600,1995-01-16, Villa ,6916, 3, 88 , 1938
+522,22," Helgesensgade 1, 2. tv, 2100 København Ø",430000,1995-01-17, Ejerlejlighed ,3613, 6, 119 , 1895
+523,23," Maltagade 24, 4. th, 2300 København S",189000,1995-01-18, Ejerlejlighed ,3500, 2, 54 , 1934
+524,24," Helgesvej 19, 1. th, 2000 Frederiksberg",358000,1995-01-19, Ejerlejlighed ,3978, 3, 90 , 1893
+525,25," Havnegade 33, 5. th, 1058 København K",979120,1995-01-19, Ejerlejlighed ,6661, 3, 147 , 1870
+526,26," Jerichausgade 15, 1777 København V",820000,1995-01-22, Rækkehus ,5985, 6, 137 , 1893
+527,27," Sankelmarksgade 13, 5. tv, 1676 København V",464500,1995-01-22, Ejerlejlighed ,6112, 3, 76 , 1901
+528,28," Forchhammersvej 33, 2. tv, 1920 Frederiksberg C",555080,1995-01-23, Ejerlejlighed ,6168, 4, 90 , 1893
+529,29," Esromgade 12, 2. th, 2200 København N",961654,1995-01-24, Ejerlejlighed ,11727, 3, 82 , 1903
+530,30," C.F. Richs Vej 85, 3. tv, 2000 Frederiksberg",452000,1995-01-24, Ejerlejlighed ,7533, 2, 60 , 1936
+531,31," Valdemarsgade 44, 4. th, 1665 København V",215500,1995-01-25, Ejerlejlighed ,3716, 3, 58 , 1895
+532,32," C.F. Richs Vej 116, st. tv, 2000 Frederiksberg",375000,1995-01-26, Ejerlejlighed ,5769, 3, 65 , 1937
+533,33," Küchlersgade 20, 1774 København V",365000,1995-01-26, Rækkehus ,1984, 9, 184 , 1887
+534,34," Gerbrandsvej 4, st. 2, 2300 København S",230000,1995-01-26, Ejerlejlighed ,4600, 2, 50 , 1939
+535,35," Classensgade 19, 5. th, 2100 København Ø",1050000,1995-01-27, Ejerlejlighed ,6000, 5, 175 , 1909
+536,36," Fiskedamsgade 27, 3. tv, 2100 København Ø",614126,1995-01-28, Ejerlejlighed ,7059, 3, 87 , 1900
+537,37," Amaliegade 4B, 2, 1256 København K",550925,1995-01-29, Ejerlejlighed ,2611, 4, 211 , 1828
+538,38," Stockholmsgade 43, 2. th, 2100 København Ø",1680000,1995-01-29, Ejerlejlighed ,7119, 7, 236 , 1896
+539,39," Trondhjemsgade 12, 3. th, 2100 København Ø",1082000,1995-01-31, Ejerlejlighed ,6848, 5, 158 , 1932
+540,40," Venedigvej 2, 4. tv, 2300 København S",157094,1995-02-01, Ejerlejlighed ,1939, 3, 81 , 1932
+541,41," Rosenørns Alle 68, 5, 1970 Frederiksberg C",730000,1995-02-01, Ejerlejlighed ,5794, 5, 126 , 1906
+542,42," Danasvej 4, 2. tv, 1910 Frederiksberg C",615000,1995-02-01, Ejerlejlighed ,6910, 4, 89 , 1898
+543,43," Dalmosevej 12, 2400 København NV",1067045,1995-02-02, Villa ,7161, 5, 149 , 1934
+544,44," Løgstørgade 34, 4. th, 2100 København Ø",426890,1995-02-02, Ejerlejlighed ,6187, 2, 69 , 1916
+545,45," Ved Volden 8, 2. th, 1425 København K",388795,1995-02-02, Ejerlejlighed ,4272, 3, 91 , 1938
+546,46," Nygårdsvej 57, st. tv, 2100 København Ø",444000,1995-02-02, Ejerlejlighed ,6343, 3, 70 , 1964
+547,47," Sprogøvej 19, 4. th, 2000 Frederiksberg",600747,1995-02-04, Ejerlejlighed ,6530, 3, 92 , 1982
+548,48," Holsteinsgade 19, st. th, 2100 København Ø",672829,1995-02-04, Ejerlejlighed ,6230, 4, 108 , 1902
+549,49," Horsensgade 6, 1. th, 2100 København Ø",295160,1995-02-05, Ejerlejlighed ,4685, 2, 63 , 1908
+550,0," Platanvej 6, 9. 2, 1810 Frederiksberg C",471425,1995-01-01, Ejerlejlighed ,6548, 2, 72 , 1972
+551,1," Pileskellet 8, 2000 Frederiksberg",1009430,1995-01-01, Ejerlejlighed ,6349, 5, 159 , 1979
+552,2," Matthæusgade 46B, 5. 548, 1666 København V",168000,1995-01-01, Ejerlejlighed ,3231, 1, 52 , 1970
+553,3," Vestergade 13, 2, 1456 København K",830000,1995-01-02, Villa ,5887, 5, 141 , 1905
+554,4," Åboulevard 23, st. th, 1960 Frederiksberg C",299593,1995-01-03, Ejerlejlighed ,1958, 5, 124 , 1885
+555,5," Livjægergade 32, st. th, 2100 København Ø",451280,1995-01-03, Ejerlejlighed ,5712, 3, 79 , 1896
+556,6," Englandsvej 47, 1. tv, 2300 København S",384781,1995-01-04, Ejerlejlighed ,5743, 3, 67 , 1935
+557,7," Betty Nansens Alle 21, 3. tv, 2000 Frederiksberg",1100000,1995-01-05, Ejerlejlighed ,8527, 4, 129 , 1976
+558,8," Jyllandsvej 13, 2000 Frederiksberg",1522785,1995-01-05, Villa ,10877, 3, 140 , 1890
+559,9," Erantisvej 20, 2300 København S",810400,1995-01-05, Villa ,8024, 4, 101 , 1923
+560,10," Straussvej 14, st. th, 2450 København SV",176000,1995-01-09, Ejerlejlighed ,1892, 4, 93 , 1934
+561,11," Livjægergade 32, 1. tv, 2100 København Ø",465000,1995-01-10, Ejerlejlighed ,5741, 4, 81 , 1896
+562,12," Åboulevard 34E, 1. tv, 2200 København N",269000,1995-01-11, Ejerlejlighed ,6256, 2, 43 , 1885
+563,13," Ribegade 12, st. tv, 2100 København Ø",650680,1995-01-11, Ejerlejlighed ,5333, 4, 122 , 1904
+564,14," Bianco Lunos Alle 4B, 2. th, 1868 Frederiksberg C",464040,1995-01-11, Ejerlejlighed ,7139, 2, 65 , 1962
+565,15," Wibrandtsvej 19, 2300 København S",670876,1995-01-12, Villa ,7711, 2, 87 , 1934
+566,16," Jansvej 54, 2300 København S",555640,1995-01-15, Villa ,6106, 5, 91 , 1926
+567,17," Christianshavns Voldgade 43, 4. tv, 1424 København K",458280,1995-01-15, Ejerlejlighed ,3498, 4, 131 , 1850
+568,18," Gladiolusvej 25, 2300 København S",740000,1995-01-15, Villa ,7551, 3, 98 , 1976
+569,19," Prins Buris Vej 6, 2300 København S",850000,1995-01-16, Villa ,5944, 4, 143 , 1929
+570,20," Lærkeskellet 14, 2000 Frederiksberg",851840,1995-01-16, Ejerlejlighed ,6085, 4, 140 , 1978
+571,21," Hindustanvej 25, 2300 København S",608600,1995-01-16, Villa ,6916, 3, 88 , 1938
+572,22," Helgesensgade 1, 2. tv, 2100 København Ø",430000,1995-01-17, Ejerlejlighed ,3613, 6, 119 , 1895
+573,23," Maltagade 24, 4. th, 2300 København S",189000,1995-01-18, Ejerlejlighed ,3500, 2, 54 , 1934
+574,24," Helgesvej 19, 1. th, 2000 Frederiksberg",358000,1995-01-19, Ejerlejlighed ,3978, 3, 90 , 1893
+575,25," Havnegade 33, 5. th, 1058 København K",979120,1995-01-19, Ejerlejlighed ,6661, 3, 147 , 1870
+576,26," Jerichausgade 15, 1777 København V",820000,1995-01-22, Rækkehus ,5985, 6, 137 , 1893
+577,27," Sankelmarksgade 13, 5. tv, 1676 København V",464500,1995-01-22, Ejerlejlighed ,6112, 3, 76 , 1901
+578,28," Forchhammersvej 33, 2. tv, 1920 Frederiksberg C",555080,1995-01-23, Ejerlejlighed ,6168, 4, 90 , 1893
+579,29," Esromgade 12, 2. th, 2200 København N",961654,1995-01-24, Ejerlejlighed ,11727, 3, 82 , 1903
+580,30," C.F. Richs Vej 85, 3. tv, 2000 Frederiksberg",452000,1995-01-24, Ejerlejlighed ,7533, 2, 60 , 1936
+581,31," Valdemarsgade 44, 4. th, 1665 København V",215500,1995-01-25, Ejerlejlighed ,3716, 3, 58 , 1895
+582,32," C.F. Richs Vej 116, st. tv, 2000 Frederiksberg",375000,1995-01-26, Ejerlejlighed ,5769, 3, 65 , 1937
+583,33," Küchlersgade 20, 1774 København V",365000,1995-01-26, Rækkehus ,1984, 9, 184 , 1887
+584,34," Gerbrandsvej 4, st. 2, 2300 København S",230000,1995-01-26, Ejerlejlighed ,4600, 2, 50 , 1939
+585,35," Classensgade 19, 5. th, 2100 København Ø",1050000,1995-01-27, Ejerlejlighed ,6000, 5, 175 , 1909
+586,36," Fiskedamsgade 27, 3. tv, 2100 København Ø",614126,1995-01-28, Ejerlejlighed ,7059, 3, 87 , 1900
+587,37," Amaliegade 4B, 2, 1256 København K",550925,1995-01-29, Ejerlejlighed ,2611, 4, 211 , 1828
+588,38," Stockholmsgade 43, 2. th, 2100 København Ø",1680000,1995-01-29, Ejerlejlighed ,7119, 7, 236 , 1896
+589,39," Trondhjemsgade 12, 3. th, 2100 København Ø",1082000,1995-01-31, Ejerlejlighed ,6848, 5, 158 , 1932
+590,40," Venedigvej 2, 4. tv, 2300 København S",157094,1995-02-01, Ejerlejlighed ,1939, 3, 81 , 1932
+591,41," Rosenørns Alle 68, 5, 1970 Frederiksberg C",730000,1995-02-01, Ejerlejlighed ,5794, 5, 126 , 1906
+592,42," Danasvej 4, 2. tv, 1910 Frederiksberg C",615000,1995-02-01, Ejerlejlighed ,6910, 4, 89 , 1898
+593,43," Dalmosevej 12, 2400 København NV",1067045,1995-02-02, Villa ,7161, 5, 149 , 1934
+594,44," Løgstørgade 34, 4. th, 2100 København Ø",426890,1995-02-02, Ejerlejlighed ,6187, 2, 69 , 1916
+595,45," Ved Volden 8, 2. th, 1425 København K",388795,1995-02-02, Ejerlejlighed ,4272, 3, 91 , 1938
+596,46," Nygårdsvej 57, st. tv, 2100 København Ø",444000,1995-02-02, Ejerlejlighed ,6343, 3, 70 , 1964
+597,47," Sprogøvej 19, 4. th, 2000 Frederiksberg",600747,1995-02-04, Ejerlejlighed ,6530, 3, 92 , 1982
+598,48," Holsteinsgade 19, st. th, 2100 København Ø",672829,1995-02-04, Ejerlejlighed ,6230, 4, 108 , 1902
+599,49," Horsensgade 6, 1. th, 2100 København Ø",295160,1995-02-05, Ejerlejlighed ,4685, 2, 63 , 1908
+600,0," Platanvej 6, 9. 2, 1810 Frederiksberg C",471425,1995-01-01, Ejerlejlighed ,6548, 2, 72 , 1972
+601,1," Pileskellet 8, 2000 Frederiksberg",1009430,1995-01-01, Ejerlejlighed ,6349, 5, 159 , 1979
+602,2," Matthæusgade 46B, 5. 548, 1666 København V",168000,1995-01-01, Ejerlejlighed ,3231, 1, 52 , 1970
+603,3," Vestergade 13, 2, 1456 København K",830000,1995-01-02, Villa ,5887, 5, 141 , 1905
+604,4," Åboulevard 23, st. th, 1960 Frederiksberg C",299593,1995-01-03, Ejerlejlighed ,1958, 5, 124 , 1885
+605,5," Livjægergade 32, st. th, 2100 København Ø",451280,1995-01-03, Ejerlejlighed ,5712, 3, 79 , 1896
+606,6," Englandsvej 47, 1. tv, 2300 København S",384781,1995-01-04, Ejerlejlighed ,5743, 3, 67 , 1935
+607,7," Betty Nansens Alle 21, 3. tv, 2000 Frederiksberg",1100000,1995-01-05, Ejerlejlighed ,8527, 4, 129 , 1976
+608,8," Jyllandsvej 13, 2000 Frederiksberg",1522785,1995-01-05, Villa ,10877, 3, 140 , 1890
+609,9," Erantisvej 20, 2300 København S",810400,1995-01-05, Villa ,8024, 4, 101 , 1923
+610,10," Straussvej 14, st. th, 2450 København SV",176000,1995-01-09, Ejerlejlighed ,1892, 4, 93 , 1934
+611,11," Livjægergade 32, 1. tv, 2100 København Ø",465000,1995-01-10, Ejerlejlighed ,5741, 4, 81 , 1896
+612,12," Åboulevard 34E, 1. tv, 2200 København N",269000,1995-01-11, Ejerlejlighed ,6256, 2, 43 , 1885
+613,13," Ribegade 12, st. tv, 2100 København Ø",650680,1995-01-11, Ejerlejlighed ,5333, 4, 122 , 1904
+614,14," Bianco Lunos Alle 4B, 2. th, 1868 Frederiksberg C",464040,1995-01-11, Ejerlejlighed ,7139, 2, 65 , 1962
+615,15," Wibrandtsvej 19, 2300 København S",670876,1995-01-12, Villa ,7711, 2, 87 , 1934
+616,16," Jansvej 54, 2300 København S",555640,1995-01-15, Villa ,6106, 5, 91 , 1926
+617,17," Christianshavns Voldgade 43, 4. tv, 1424 København K",458280,1995-01-15, Ejerlejlighed ,3498, 4, 131 , 1850
+618,18," Gladiolusvej 25, 2300 København S",740000,1995-01-15, Villa ,7551, 3, 98 , 1976
+619,19," Prins Buris Vej 6, 2300 København S",850000,1995-01-16, Villa ,5944, 4, 143 , 1929
+620,20," Lærkeskellet 14, 2000 Frederiksberg",851840,1995-01-16, Ejerlejlighed ,6085, 4, 140 , 1978
+621,21," Hindustanvej 25, 2300 København S",608600,1995-01-16, Villa ,6916, 3, 88 , 1938
+622,22," Helgesensgade 1, 2. tv, 2100 København Ø",430000,1995-01-17, Ejerlejlighed ,3613, 6, 119 , 1895
+623,23," Maltagade 24, 4. th, 2300 København S",189000,1995-01-18, Ejerlejlighed ,3500, 2, 54 , 1934
+624,24," Helgesvej 19, 1. th, 2000 Frederiksberg",358000,1995-01-19, Ejerlejlighed ,3978, 3, 90 , 1893
+625,25," Havnegade 33, 5. th, 1058 København K",979120,1995-01-19, Ejerlejlighed ,6661, 3, 147 , 1870
+626,26," Jerichausgade 15, 1777 København V",820000,1995-01-22, Rækkehus ,5985, 6, 137 , 1893
+627,27," Sankelmarksgade 13, 5. tv, 1676 København V",464500,1995-01-22, Ejerlejlighed ,6112, 3, 76 , 1901
+628,28," Forchhammersvej 33, 2. tv, 1920 Frederiksberg C",555080,1995-01-23, Ejerlejlighed ,6168, 4, 90 , 1893
+629,29," Esromgade 12, 2. th, 2200 København N",961654,1995-01-24, Ejerlejlighed ,11727, 3, 82 , 1903
+630,30," C.F. Richs Vej 85, 3. tv, 2000 Frederiksberg",452000,1995-01-24, Ejerlejlighed ,7533, 2, 60 , 1936
+631,31," Valdemarsgade 44, 4. th, 1665 København V",215500,1995-01-25, Ejerlejlighed ,3716, 3, 58 , 1895
+632,32," C.F. Richs Vej 116, st. tv, 2000 Frederiksberg",375000,1995-01-26, Ejerlejlighed ,5769, 3, 65 , 1937
+633,33," Küchlersgade 20, 1774 København V",365000,1995-01-26, Rækkehus ,1984, 9, 184 , 1887
+634,34," Gerbrandsvej 4, st. 2, 2300 København S",230000,1995-01-26, Ejerlejlighed ,4600, 2, 50 , 1939
+635,35," Classensgade 19, 5. th, 2100 København Ø",1050000,1995-01-27, Ejerlejlighed ,6000, 5, 175 , 1909
+636,36," Fiskedamsgade 27, 3. tv, 2100 København Ø",614126,1995-01-28, Ejerlejlighed ,7059, 3, 87 , 1900
+637,37," Amaliegade 4B, 2, 1256 København K",550925,1995-01-29, Ejerlejlighed ,2611, 4, 211 , 1828
+638,38," Stockholmsgade 43, 2. th, 2100 København Ø",1680000,1995-01-29, Ejerlejlighed ,7119, 7, 236 , 1896
+639,39," Trondhjemsgade 12, 3. th, 2100 København Ø",1082000,1995-01-31, Ejerlejlighed ,6848, 5, 158 , 1932
+640,40," Venedigvej 2, 4. tv, 2300 København S",157094,1995-02-01, Ejerlejlighed ,1939, 3, 81 , 1932
+641,41," Rosenørns Alle 68, 5, 1970 Frederiksberg C",730000,1995-02-01, Ejerlejlighed ,5794, 5, 126 , 1906
+642,42," Danasvej 4, 2. tv, 1910 Frederiksberg C",615000,1995-02-01, Ejerlejlighed ,6910, 4, 89 , 1898
+643,43," Dalmosevej 12, 2400 København NV",1067045,1995-02-02, Villa ,7161, 5, 149 , 1934
+644,44," Løgstørgade 34, 4. th, 2100 København Ø",426890,1995-02-02, Ejerlejlighed ,6187, 2, 69 , 1916
+645,45," Ved Volden 8, 2. th, 1425 København K",388795,1995-02-02, Ejerlejlighed ,4272, 3, 91 , 1938
+646,46," Nygårdsvej 57, st. tv, 2100 København Ø",444000,1995-02-02, Ejerlejlighed ,6343, 3, 70 , 1964
+647,47," Sprogøvej 19, 4. th, 2000 Frederiksberg",600747,1995-02-04, Ejerlejlighed ,6530, 3, 92 , 1982
+648,48," Holsteinsgade 19, st. th, 2100 København Ø",672829,1995-02-04, Ejerlejlighed ,6230, 4, 108 , 1902
+649,49," Horsensgade 6, 1. th, 2100 København Ø",295160,1995-02-05, Ejerlejlighed ,4685, 2, 63 , 1908
+650,0," Platanvej 6, 9. 2, 1810 Frederiksberg C",471425,1995-01-01, Ejerlejlighed ,6548, 2, 72 , 1972
+651,1," Pileskellet 8, 2000 Frederiksberg",1009430,1995-01-01, Ejerlejlighed ,6349, 5, 159 , 1979
+652,2," Matthæusgade 46B, 5. 548, 1666 København V",168000,1995-01-01, Ejerlejlighed ,3231, 1, 52 , 1970
+653,3," Vestergade 13, 2, 1456 København K",830000,1995-01-02, Villa ,5887, 5, 141 , 1905
+654,4," Åboulevard 23, st. th, 1960 Frederiksberg C",299593,1995-01-03, Ejerlejlighed ,1958, 5, 124 , 1885
+655,5," Livjægergade 32, st. th, 2100 København Ø",451280,1995-01-03, Ejerlejlighed ,5712, 3, 79 , 1896
+656,6," Englandsvej 47, 1. tv, 2300 København S",384781,1995-01-04, Ejerlejlighed ,5743, 3, 67 , 1935
+657,7," Betty Nansens Alle 21, 3. tv, 2000 Frederiksberg",1100000,1995-01-05, Ejerlejlighed ,8527, 4, 129 , 1976
+658,8," Jyllandsvej 13, 2000 Frederiksberg",1522785,1995-01-05, Villa ,10877, 3, 140 , 1890
+659,9," Erantisvej 20, 2300 København S",810400,1995-01-05, Villa ,8024, 4, 101 , 1923
+660,10," Straussvej 14, st. th, 2450 København SV",176000,1995-01-09, Ejerlejlighed ,1892, 4, 93 , 1934
+661,11," Livjægergade 32, 1. tv, 2100 København Ø",465000,1995-01-10, Ejerlejlighed ,5741, 4, 81 , 1896
+662,12," Åboulevard 34E, 1. tv, 2200 København N",269000,1995-01-11, Ejerlejlighed ,6256, 2, 43 , 1885
+663,13," Ribegade 12, st. tv, 2100 København Ø",650680,1995-01-11, Ejerlejlighed ,5333, 4, 122 , 1904
+664,14," Bianco Lunos Alle 4B, 2. th, 1868 Frederiksberg C",464040,1995-01-11, Ejerlejlighed ,7139, 2, 65 , 1962
+665,15," Wibrandtsvej 19, 2300 København S",670876,1995-01-12, Villa ,7711, 2, 87 , 1934
+666,16," Jansvej 54, 2300 København S",555640,1995-01-15, Villa ,6106, 5, 91 , 1926
+667,17," Christianshavns Voldgade 43, 4. tv, 1424 København K",458280,1995-01-15, Ejerlejlighed ,3498, 4, 131 , 1850
+668,18," Gladiolusvej 25, 2300 København S",740000,1995-01-15, Villa ,7551, 3, 98 , 1976
+669,19," Prins Buris Vej 6, 2300 København S",850000,1995-01-16, Villa ,5944, 4, 143 , 1929
+670,20," Lærkeskellet 14, 2000 Frederiksberg",851840,1995-01-16, Ejerlejlighed ,6085, 4, 140 , 1978
+671,21," Hindustanvej 25, 2300 København S",608600,1995-01-16, Villa ,6916, 3, 88 , 1938
+672,22," Helgesensgade 1, 2. tv, 2100 København Ø",430000,1995-01-17, Ejerlejlighed ,3613, 6, 119 , 1895
+673,23," Maltagade 24, 4. th, 2300 København S",189000,1995-01-18, Ejerlejlighed ,3500, 2, 54 , 1934
+674,24," Helgesvej 19, 1. th, 2000 Frederiksberg",358000,1995-01-19, Ejerlejlighed ,3978, 3, 90 , 1893
+675,25," Havnegade 33, 5. th, 1058 København K",979120,1995-01-19, Ejerlejlighed ,6661, 3, 147 , 1870
+676,26," Jerichausgade 15, 1777 København V",820000,1995-01-22, Rækkehus ,5985, 6, 137 , 1893
+677,27," Sankelmarksgade 13, 5. tv, 1676 København V",464500,1995-01-22, Ejerlejlighed ,6112, 3, 76 , 1901
+678,28," Forchhammersvej 33, 2. tv, 1920 Frederiksberg C",555080,1995-01-23, Ejerlejlighed ,6168, 4, 90 , 1893
+679,29," Esromgade 12, 2. th, 2200 København N",961654,1995-01-24, Ejerlejlighed ,11727, 3, 82 , 1903
+680,30," C.F. Richs Vej 85, 3. tv, 2000 Frederiksberg",452000,1995-01-24, Ejerlejlighed ,7533, 2, 60 , 1936
+681,31," Valdemarsgade 44, 4. th, 1665 København V",215500,1995-01-25, Ejerlejlighed ,3716, 3, 58 , 1895
+682,32," C.F. Richs Vej 116, st. tv, 2000 Frederiksberg",375000,1995-01-26, Ejerlejlighed ,5769, 3, 65 , 1937
+683,33," Küchlersgade 20, 1774 København V",365000,1995-01-26, Rækkehus ,1984, 9, 184 , 1887
+684,34," Gerbrandsvej 4, st. 2, 2300 København S",230000,1995-01-26, Ejerlejlighed ,4600, 2, 50 , 1939
+685,35," Classensgade 19, 5. th, 2100 København Ø",1050000,1995-01-27, Ejerlejlighed ,6000, 5, 175 , 1909
+686,36," Fiskedamsgade 27, 3. tv, 2100 København Ø",614126,1995-01-28, Ejerlejlighed ,7059, 3, 87 , 1900
+687,37," Amaliegade 4B, 2, 1256 København K",550925,1995-01-29, Ejerlejlighed ,2611, 4, 211 , 1828
+688,38," Stockholmsgade 43, 2. th, 2100 København Ø",1680000,1995-01-29, Ejerlejlighed ,7119, 7, 236 , 1896
+689,39," Trondhjemsgade 12, 3. th, 2100 København Ø",1082000,1995-01-31, Ejerlejlighed ,6848, 5, 158 , 1932
+690,40," Venedigvej 2, 4. tv, 2300 København S",157094,1995-02-01, Ejerlejlighed ,1939, 3, 81 , 1932
+691,41," Rosenørns Alle 68, 5, 1970 Frederiksberg C",730000,1995-02-01, Ejerlejlighed ,5794, 5, 126 , 1906
+692,42," Danasvej 4, 2. tv, 1910 Frederiksberg C",615000,1995-02-01, Ejerlejlighed ,6910, 4, 89 , 1898
+693,43," Dalmosevej 12, 2400 København NV",1067045,1995-02-02, Villa ,7161, 5, 149 , 1934
+694,44," Løgstørgade 34, 4. th, 2100 København Ø",426890,1995-02-02, Ejerlejlighed ,6187, 2, 69 , 1916
+695,45," Ved Volden 8, 2. th, 1425 København K",388795,1995-02-02, Ejerlejlighed ,4272, 3, 91 , 1938
+696,46," Nygårdsvej 57, st. tv, 2100 København Ø",444000,1995-02-02, Ejerlejlighed ,6343, 3, 70 , 1964
+697,47," Sprogøvej 19, 4. th, 2000 Frederiksberg",600747,1995-02-04, Ejerlejlighed ,6530, 3, 92 , 1982
+698,48," Holsteinsgade 19, st. th, 2100 København Ø",672829,1995-02-04, Ejerlejlighed ,6230, 4, 108 , 1902
+699,49," Horsensgade 6, 1. th, 2100 København Ø",295160,1995-02-05, Ejerlejlighed ,4685, 2, 63 , 1908
+700,0," Platanvej 6, 9. 2, 1810 Frederiksberg C",471425,1995-01-01, Ejerlejlighed ,6548, 2, 72 , 1972
+701,1," Pileskellet 8, 2000 Frederiksberg",1009430,1995-01-01, Ejerlejlighed ,6349, 5, 159 , 1979
+702,2," Matthæusgade 46B, 5. 548, 1666 København V",168000,1995-01-01, Ejerlejlighed ,3231, 1, 52 , 1970
+703,3," Vestergade 13, 2, 1456 København K",830000,1995-01-02, Villa ,5887, 5, 141 , 1905
+704,4," Åboulevard 23, st. th, 1960 Frederiksberg C",299593,1995-01-03, Ejerlejlighed ,1958, 5, 124 , 1885
+705,5," Livjægergade 32, st. th, 2100 København Ø",451280,1995-01-03, Ejerlejlighed ,5712, 3, 79 , 1896
+706,6," Englandsvej 47, 1. tv, 2300 København S",384781,1995-01-04, Ejerlejlighed ,5743, 3, 67 , 1935
+707,7," Betty Nansens Alle 21, 3. tv, 2000 Frederiksberg",1100000,1995-01-05, Ejerlejlighed ,8527, 4, 129 , 1976
+708,8," Jyllandsvej 13, 2000 Frederiksberg",1522785,1995-01-05, Villa ,10877, 3, 140 , 1890
+709,9," Erantisvej 20, 2300 København S",810400,1995-01-05, Villa ,8024, 4, 101 , 1923
+710,10," Straussvej 14, st. th, 2450 København SV",176000,1995-01-09, Ejerlejlighed ,1892, 4, 93 , 1934
+711,11," Livjægergade 32, 1. tv, 2100 København Ø",465000,1995-01-10, Ejerlejlighed ,5741, 4, 81 , 1896
+712,12," Åboulevard 34E, 1. tv, 2200 København N",269000,1995-01-11, Ejerlejlighed ,6256, 2, 43 , 1885
+713,13," Ribegade 12, st. tv, 2100 København Ø",650680,1995-01-11, Ejerlejlighed ,5333, 4, 122 , 1904
+714,14," Bianco Lunos Alle 4B, 2. th, 1868 Frederiksberg C",464040,1995-01-11, Ejerlejlighed ,7139, 2, 65 , 1962
+715,15," Wibrandtsvej 19, 2300 København S",670876,1995-01-12, Villa ,7711, 2, 87 , 1934
+716,16," Jansvej 54, 2300 København S",555640,1995-01-15, Villa ,6106, 5, 91 , 1926
+717,17," Christianshavns Voldgade 43, 4. tv, 1424 København K",458280,1995-01-15, Ejerlejlighed ,3498, 4, 131 , 1850
+718,18," Gladiolusvej 25, 2300 København S",740000,1995-01-15, Villa ,7551, 3, 98 , 1976
+719,19," Prins Buris Vej 6, 2300 København S",850000,1995-01-16, Villa ,5944, 4, 143 , 1929
+720,20," Lærkeskellet 14, 2000 Frederiksberg",851840,1995-01-16, Ejerlejlighed ,6085, 4, 140 , 1978
+721,21," Hindustanvej 25, 2300 København S",608600,1995-01-16, Villa ,6916, 3, 88 , 1938
+722,22," Helgesensgade 1, 2. tv, 2100 København Ø",430000,1995-01-17, Ejerlejlighed ,3613, 6, 119 , 1895
+723,23," Maltagade 24, 4. th, 2300 København S",189000,1995-01-18, Ejerlejlighed ,3500, 2, 54 , 1934
+724,24," Helgesvej 19, 1. th, 2000 Frederiksberg",358000,1995-01-19, Ejerlejlighed ,3978, 3, 90 , 1893
+725,25," Havnegade 33, 5. th, 1058 København K",979120,1995-01-19, Ejerlejlighed ,6661, 3, 147 , 1870
+726,26," Jerichausgade 15, 1777 København V",820000,1995-01-22, Rækkehus ,5985, 6, 137 , 1893
+727,27," Sankelmarksgade 13, 5. tv, 1676 København V",464500,1995-01-22, Ejerlejlighed ,6112, 3, 76 , 1901
+728,28," Forchhammersvej 33, 2. tv, 1920 Frederiksberg C",555080,1995-01-23, Ejerlejlighed ,6168, 4, 90 , 1893
+729,29," Esromgade 12, 2. th, 2200 København N",961654,1995-01-24, Ejerlejlighed ,11727, 3, 82 , 1903
+730,30," C.F. Richs Vej 85, 3. tv, 2000 Frederiksberg",452000,1995-01-24, Ejerlejlighed ,7533, 2, 60 , 1936
+731,31," Valdemarsgade 44, 4. th, 1665 København V",215500,1995-01-25, Ejerlejlighed ,3716, 3, 58 , 1895
+732,32," C.F. Richs Vej 116, st. tv, 2000 Frederiksberg",375000,1995-01-26, Ejerlejlighed ,5769, 3, 65 , 1937
+733,33," Küchlersgade 20, 1774 København V",365000,1995-01-26, Rækkehus ,1984, 9, 184 , 1887
+734,34," Gerbrandsvej 4, st. 2, 2300 København S",230000,1995-01-26, Ejerlejlighed ,4600, 2, 50 , 1939
+735,35," Classensgade 19, 5. th, 2100 København Ø",1050000,1995-01-27, Ejerlejlighed ,6000, 5, 175 , 1909
+736,36," Fiskedamsgade 27, 3. tv, 2100 København Ø",614126,1995-01-28, Ejerlejlighed ,7059, 3, 87 , 1900
+737,37," Amaliegade 4B, 2, 1256 København K",550925,1995-01-29, Ejerlejlighed ,2611, 4, 211 , 1828
+738,38," Stockholmsgade 43, 2. th, 2100 København Ø",1680000,1995-01-29, Ejerlejlighed ,7119, 7, 236 , 1896
+739,39," Trondhjemsgade 12, 3. th, 2100 København Ø",1082000,1995-01-31, Ejerlejlighed ,6848, 5, 158 , 1932
+740,40," Venedigvej 2, 4. tv, 2300 København S",157094,1995-02-01, Ejerlejlighed ,1939, 3, 81 , 1932
+741,41," Rosenørns Alle 68, 5, 1970 Frederiksberg C",730000,1995-02-01, Ejerlejlighed ,5794, 5, 126 , 1906
+742,42," Danasvej 4, 2. tv, 1910 Frederiksberg C",615000,1995-02-01, Ejerlejlighed ,6910, 4, 89 , 1898
+743,43," Dalmosevej 12, 2400 København NV",1067045,1995-02-02, Villa ,7161, 5, 149 , 1934
+744,44," Løgstørgade 34, 4. th, 2100 København Ø",426890,1995-02-02, Ejerlejlighed ,6187, 2, 69 , 1916
+745,45," Ved Volden 8, 2. th, 1425 København K",388795,1995-02-02, Ejerlejlighed ,4272, 3, 91 , 1938
+746,46," Nygårdsvej 57, st. tv, 2100 København Ø",444000,1995-02-02, Ejerlejlighed ,6343, 3, 70 , 1964
+747,47," Sprogøvej 19, 4. th, 2000 Frederiksberg",600747,1995-02-04, Ejerlejlighed ,6530, 3, 92 , 1982
+748,48," Holsteinsgade 19, st. th, 2100 København Ø",672829,1995-02-04, Ejerlejlighed ,6230, 4, 108 , 1902
+749,49," Horsensgade 6, 1. th, 2100 København Ø",295160,1995-02-05, Ejerlejlighed ,4685, 2, 63 , 1908
