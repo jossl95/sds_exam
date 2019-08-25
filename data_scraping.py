@@ -5,7 +5,7 @@ import requests, os, time
 
 def ratelimit():
     "A function that handles the rate of your calls."
-    time.sleep(1) # sleep one second.
+    time.sleep(.5) # sleep one second.
 
 class Connector():
   def __init__(self,logfile,overwrite_log=False,connector_type='requests',session=False,path2selenium='',n_tries = 5,timeout=30):
@@ -142,6 +142,7 @@ import re
 ##################################
 # Downloading relevant packages for geoppy and connector
 from geopy.geocoders import Nominatim
+from geopy.extra.rate_limiter import RateLimiter
 from Connector import Connector, ratelimit
 import time
 import os
@@ -213,10 +214,9 @@ if not os.path.isdir(project):    # Checks if the folder exist
 
 # Making a for loop, which loops through page 1 to 288, so that we get data from  01/01/1995 - 31/12/2007
 price_data = []
-max_page = 2 #288
-for p in range(max_page):
-    url = 'https://www.boliga.dk/salg/resultater?salesDateMin=1995&zipcodeFrom=1000&zipcodeTo=2499&searchTab=1&page='\
-    + str(p) + '&sort=date-a'
+max_page = 15 #288
+for p in range(10, 10+max_page):
+    url = 'https://www.boliga.dk/salg/resultater?salesDateMin=1995&zipcodeFrom=1000&zipcodeTo=2499&searchTab=1&page='+'%d&sort=date-a'%p
     price_data.append(scraping_function(url))
     time.sleep(4)
 
@@ -397,8 +397,8 @@ print(len(boliga_data), len(boliga_data.drop_duplicates()))
 print(boliga_data['Type'].value_counts())
 
 # Histogram of the distrubution of square meters
-m2_distribution = boliga_data['m2'].hist(bins=20)
-plt.show()
+# m2_distribution = boliga_data['m2'].hist(bins=20)
+# plt.show()
 
 ##########################################################
 #                                                        #
@@ -413,22 +413,21 @@ log_df = pd.read_csv('Scraping_file.csv', sep=';')
 log_df['dt'] = pd.to_datetime(log_df.t, unit='s') #unit is seconds
 
 # Visualization of the time it took to make the call for data
-plt.style.use('ggplot')
-plt.figure(figsize = (20, 6))
-plt.plot(log_df['dt'], log_df.delta_t)
-plt.ylabel('Delta t')
-plt.xlabel('Scraping process')
-plt.title('The time it took to make the call for data')
-plt.show()
+# plt.figure(figsize = (20, 6))
+# plt.plot(log_df['dt'], log_df.delta_t)
+# plt.ylabel('Delta t')
+# plt.xlabel('Scraping process')
+# plt.title('The time it took to make the call for data')
+# plt.show()
 
 # Visualization of the response size through the scraping process
-plt.style.use('ggplot')
-plt.figure(figsiz = (20, 6))
-plt.plot(log_df.dt, log_df.response_size)
-plt.ylabel('Response size')
-plt.xlabel('Scraping process')
-plt.title('The response size through the scraping process')
-plt.show()
+# plt.style.use('ggplot')
+# plt.figure(figsize = (20, 6))
+# plt.plot(log_df.dt, log_df.response_size)
+# plt.ylabel('Response size')
+# plt.xlabel('Scraping process')
+# plt.title('The response size through the scraping process')
+# plt.show()
 
 ##########################################################
 #                                                        #
@@ -437,7 +436,8 @@ plt.show()
 ##########################################################
 
 # Calling the geolocator from geopy
-geolocator = Nominatim(user_agent="Social Data Science Student", timeout = 20)
+geolocator = Nominatim(user_agent="SDS Student")
+geocode = RateLimiter(geolocator.geocode, min_delay_seconds=1)
 
 # Defining a function which downloads information about longtitude and latitude
 def address_parser (address_list):
@@ -461,7 +461,24 @@ def address_parser (address_list):
         locations.append(stre)
     return street, locations, latitude, longitude
 
-street, locations, latitude, longitude = address_parser(boliga_data['Address'])
+
+dir = str(os.getcwd())
+datafile = dir + "/boliga/data/housing_data_test.csv"
+boliga_data = pd.read_csv(datafile)
+chunksize = 25
+street, locations, latitude, longitude, = [],[],[],[]
+for i, chunk in boliga_data.groupby(np.arange(len(boliga_data)) // chunksize):
+    results = address_parser(chunk['Address'])
+    street.append(results[0])
+    locations.append(results[1])
+    latitude.append(results[2])
+    longitude.append(results[3])
+    df = pd.DataFrame(results)
+    file_path = dir + "/boliga/data/location_data_" + str(i) + ".csv"
+    with open(file_path, mode='w', encoding='UTF-8',
+                  errors='strict', buffering=1) as f:
+        f.write(df.to_csv())
+    df.free_all()
 
 # Transforming into a pandas dataframe
 df_location = pd.DataFrame([street, locations, latitude, longitude],
@@ -469,8 +486,7 @@ df_location = pd.DataFrame([street, locations, latitude, longitude],
                      'Longitude']).T
 
 boliga_data = pd.concat([boliga_data, df_location], axis=1, join='inner')
-
-
+	
 #####################################################
 #                                                   #
 #                 Monthly data                      #
