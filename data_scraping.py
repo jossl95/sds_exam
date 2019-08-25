@@ -469,3 +469,13 @@ df_location = pd.DataFrame([street, locations, latitude, longitude],
                      'Longitude']).T
 
 boliga_data = pd.concat([boliga_data, df_location], axis=1, join='inner')
+
+
+#####################################################
+#                                                   #
+#                 Monthly data                      #
+#                                                   #
+#####################################################
+
+monthly_price = boliga_data.sqm_price.resample('M').mean()
+monthly_price['monthly change'] = monyhly_price.pct_change(periods=1, axis=0)
