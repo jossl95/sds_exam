@@ -7,11 +7,11 @@ import glob
 
 #######################
 #    Scraping data    #
-#######################
+################################################################################
 
 #Initialization of selenium
-path2gecko = '/Users/MacbookJos/git/geckodriver' # define path to your geckodriver
-browser = webdriver.Firefox(executable_path=path2gecko) # start the browser with a path to the geckodriver.
+path2gecko = '/Users/MacbookJos/git/geckodriver' # define path  geckodriver
+browser = webdriver.Firefox(executable_path=path2gecko)
 
 # direction to boliga.dk
 browser.get('https://www.boliga.dk/salg/resultater?salesDateMin=1995&zipcodeFrom=1000&zipcodeTo=2499&searchTab=1&page=1&sort=date-a')
@@ -71,7 +71,7 @@ while i <= 10:
         """
         NOTE: several indicators are different than from the indicators
         that are established with the requests package. `dt`, does not
-        necessarily reflect the complete load time. `size` might not  be
+        necessarily reflect the complete load time. `size` might not be
         correct as selenium works in the background and could still be
         loading
         """
@@ -112,9 +112,9 @@ while i <= 10:
     time.sleep(1)
     i += 1
 
-##############################
-#    Apppending csv-files    #
-##############################
+########################
+# Apppending csv-files #
+########################
 
 #Path to file directory
 boliga_directory = dir + '/boliga/scrape/'
@@ -137,13 +137,13 @@ with open(file_path, mode='w', encoding='UTF-8',
           errors='strict', buffering=1) as f:
     f.write(boliga_data.to_csv())
 
-####################################################
-#      Scraping from wiki for train stations       #
-####################################################
+#########################################
+# Scraping from wiki for train stations #
+################################################################################
 
-####################################################
-#                  Metro stations                  #
-####################################################
+##################
+# Metro stations #
+##################
 # Scrape initial table of stations
 url = "https://en.wikipedia.org/wiki/List_of_Copenhagen_Metro_stations"
 resp, callid = connector.get(url, 'mstation_scrape')
@@ -219,9 +219,9 @@ with open(file_path, mode='w', encoding='UTF-8',
               errors='strict', buffering=1) as f:
     f.write(df_mstation.to_csv())
 
-##########################################################
-#                    S-train stations                    #
-##########################################################
+####################
+# S-train stations #
+###############################################################################
 # Scrape initial table of stations
 url = "https://en.wikipedia.org/wiki/List_of_Copenhagen_S-train_stations"
 resp, callid = connector.get(url, 'sstation_scrape')
@@ -266,3 +266,25 @@ file_path = dir + "/boliga/data/sstation_data.csv"
 with open(file_path, mode='w', encoding='UTF-8',
               errors='strict', buffering=1) as f:
     f.write(df_sstation.to_csv())
+
+###################
+# Data inspection #
+################################################################################
+########################################
+# Random sample inspection of our data #
+########################################
+# Random sample of the data scraped from boliga.dk
+print(boliga_data.sample(15))
+
+# Random sample of data from the metro stations
+print(df_mstation.sample(5))
+
+# Random sample of data from the s-train stations
+print(df_sstation.sample(5))
+
+# Checks if our scraped data contains duplicates
+# Boliga constains 14.400 sold houses in the chosen period of time (01/01/1995 - 31/12/2007)
+print(len(boliga_data), len(boliga_data.drop_duplicates()))
+
+# Shows the amount of different real estate types (appartments, houses, terraced house)
+print(boliga_data['Type'].value_counts())
