@@ -99,7 +99,7 @@ while i <= 288: #288
     connector_type = "selenium"
     redirect_url = browser.current_url # log current url, after potential redirects
     dt = t - time.time()               # define delta-time waiting for the server and downloading content.
-    size = len(browser.page_source)    # define variable for size of html content of the response.
+    size = df.memory_usage(deep=True, index=True).sum()    # define variable for size of html content of the response.
     response_code = ''                 # log status code.
 
     ## log...
