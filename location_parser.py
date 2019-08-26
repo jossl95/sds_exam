@@ -1,15 +1,18 @@
+# -*- coding: utf-8 -*-
+from selenium import webdriver
+import time, os, re
+import glob
+import pandas as pd
+from Connector import Connector, ratelimit
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import datetime as dt
+import random
 import requests
 import pandas as pd
-import numpy as np
 from bs4 import BeautifulSoup
 from datetime import datetime
-import scraping_class
-import re
-from geopy.geocoders import Nominatim
-from geopy.extra.rate_limiter import RateLimiter
-from Connector import Connector, ratelimit
-import time
-import os
 
 # Calling the geolocator from geopy
 geolocator = Nominatim(user_agent="SDS Student")
@@ -77,12 +80,12 @@ file_path = dir + "/boliga/location/location_data_log"
 with open(file_path, mode='w', encoding='UTF-8',
               errors='strict', buffering=1) as f:
     f.write(dt)
-# Transforming into a pandas dataframe
+Transforming into a pandas dataframe
 #Path to file directory
 location_dir = dir + '/boliga/location/'
 
 #import all the files in the folder
-location_files = glob.glob(os.path.join(boliga_dir, '*.csv'))
+location_files = glob.glob(os.path.join(location_dir, '*.csv'))
 
 #loop throug all files and read as pandas
 merged_df = [] #saves as list of dataframes
