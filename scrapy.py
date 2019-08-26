@@ -59,7 +59,7 @@ def df2table(html):
 
 i = 1
 dir = str(os.getcwd())
-while i <= 3:
+while i <= 288: #288
     ## Initialization of log
     logfile = 'log_boliga_csv'
     project_name = 'SDS exam'
