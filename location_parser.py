@@ -94,10 +94,38 @@ for file in location_files:
     merged_df.append(df)
 
 #merge the dataframes with concat
-boliga_data = pd.concat(merged_df, ignore_index=True)
+location_data = pd.concat(merged_df, ignore_index=True)
 
 #save as csv
 file_path = str(dir + '/boliga/data/location_data.csv')
 with open(file_path, mode='w', encoding='UTF-8',
           errors='strict', buffering=1) as f:
-    f.write(boliga_data.to_csv())
+    f.write(location_data.to_csv())
+############################
+# merge with full datafile #
+################################################################################
+# load boliga_data
+dir = str(os.getcwd())
+datafile = dir + "/boliga/data/housing_data.csv"
+boliga_data = pd.read_csv(datafile)
+boliga_data = boliga_data.iloc[:, 2:]
+boliga_data['building_address'] = pd.DataFrame([a[0] + ' ' + a[-1][6:]\
+                for a in boliga_data['Address'].str.split(',')])
+boliga_data['building_address'] = boliga_data['building_address'].str.lstrip()
+
+# load appended location data
+location_file = dir +"/boliga/data/location_data.csv"
+location_data = pd.read_csv(location_file)
+location_data = location_data.iloc[:,2:]
+
+#merge data
+
+full_data = pd.merge(boliga_data, location_data, on= 'building_address')
+full_data = full_data.reset_index()
+full_data = full_data.iloc[:,2:]
+print(full_data.head())
+
+file_path = str(dir + '/boliga/data/full_data.csv')
+with open(file_path, mode='w', encoding='UTF-8',
+          errors='strict', buffering=1) as f:
+    f.write(full_data.to_csv())
