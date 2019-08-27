@@ -21,7 +21,9 @@ path_ssta = dir +'/boliga/data/sstation_data.csv'
 
 full_data = pd.read_csv(path_full, index_col=0)
 df_mstation = pd.read_csv(path_msta, index_col=0)
+df_mstation[['Longitude','Latitude']] = df_mstation[['Longitude','Latitude']].abs()
 df_sstation = pd.read_csv(path_ssta, index_col=0)
+df_sstation[['Longitude', 'Latitude']] = df_sstation[['Longitude','Latitude']].abs()
 
 ################
 # Data quality #
@@ -167,7 +169,7 @@ def map_points(df, lat_col='latitude', lon_col='longitude', zoom_start=11, \
 
     curr_map = folium.Map(location=[middle_lat, middle_lon],
                           zoom_start=zoom_start,
-                          tiles = "cartodbpositron")
+                          tiles='Stamen Terrain')
 
     # add points to map
     if plot_points:
@@ -198,8 +200,44 @@ def map_points(df, lat_col='latitude', lon_col='longitude', zoom_start=11, \
     return curr_map
 
 # define map
-m = map_points(full_data, 'latitude', 'longitude', draw_heatmap=True, zoom_start=12,
-           heat_map_radius=11, heat_map_weights_normalize=False)
+# Creating a map of Copenhagen (specified to the area that we need)
+m = folium.Map([55.676098, 12.568337], zoom_start=12)
+
+# Adding s-train stations to the map
+for index, row in df_sstation.iterrows():
+    folium.Circle(
+        radius=50,
+        location=(row['Latitude'],row['Longitude']),
+        popup=row['Station'],
+        fill=True,
+        color = 'Blue').add_to(m)
+
+# Adding metro-stations to the map
+for index, row in df_mstation.iterrows():
+    folium.Circle(
+        radius=50,
+        location=(row['Latitude'],row['Longitude']),
+        popup=row['Station'],
+        fill=True,
+        color = 'Red').add_to(m)
+
+m
+
+# Adding the heatmap of sold properties to the map with s-train and metro-stations
+Sold_houses = full_data[['latitude', 'longitude']].values
+m.add_child(plugins.HeatMap(Sold_houses, radius=10))
+
+Train_legend =   '''
+                <div style="position: fixed; background:white;
+                            top: 150px; right: 350px; width: 170px; height: 75;
+                            border:3px solid grey; z-index:9999; font-size:16.5px; font-color=black; weight='bold';
+                            ">&nbsp; Station type: <br>
+                              &nbsp; Metro-station &nbsp; <i class="fa fa-circle-thin fa-1x" style="color:red"></i><br>
+                              &nbsp; S-train station &nbsp; <i class="fa fa-circle-thin fa-1x" style="color:blue"></i>
+                </div>
+                '''
+
+m.get_root().html.add_child(folium.Element(Train_legend))
 m.save('copenhagen_map.html')
 
 # using selenium to safe HTML as png
@@ -210,7 +248,7 @@ html= 'file:///Users/MacbookJos/git/sds_exam/copenhagen_map.html'
 
 browser.get(html)
 time.sleep(5)
-browser.save_screenshot('Users/MacbookJos/git/sds_exam/map.png')
+browser.save_screenshot('fig8.png')
 browser.quit()
 
 # #parse the opening year from int to string to datetime
