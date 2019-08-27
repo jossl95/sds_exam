@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
@@ -6,15 +7,20 @@ import os
 import datetime as dt
 from scipy.stats import pearsonr
 import glob
+import matplotlib.dates as mdates
+from geopy.distance import geodesic
+from dateutil.parser import parse
+from geopy.geocoders import Nominatim
+import statsmodels
 
 dir = str(os.getcwd())
 path_full = dir +'/boliga/data/full_data.csv'
 path_msta = dir +'/boliga/data/mstation_data.csv'
 path_ssta = dir +'/boliga/data/sstation_data.csv'
 
-full_data = pd.read_csv(path_full)
-df_mstation = pd.read_csv(path_msta)
-df_sstation = pd.read_csv(path_ssta)
+full_data = pd.read_csv(path_full, index_col=0)
+df_mstation = pd.read_csv(path_msta, index_col=0)
+df_sstation = pd.read_csv(path_ssta, index_col=0)
 
 ################
 # Data quality #
@@ -86,7 +92,6 @@ log_df.columns = ['id', 'project', 'connector_type', 't', 'delta_t', 'url',
 print("head of log_file: \n", log_df.head())
 
 # Visualization of the time it took to make the call for data
-plt.style.use('ggplot')
 plt.figure(figsize = (12, 4))
 plt.plot(log_df['datetime'], log_df.delta_t, color='green')
 plt.ylabel('Delta t', color='black')
@@ -95,7 +100,6 @@ plt.title('The time it took to make the call for data', weight='bold')
 plt.savefig('fig4.png')
 
 # Visualization of the response size through the scraping process
-plt.style.use('ggplot')
 plt.figure(figsize = (12, 4))
 plt.plot(log_df['datetime'], log_df['response_size'], color='green')
 plt.ylabel('bytes in the csv files', color='black')
@@ -104,5 +108,143 @@ plt.title('The size of csv files through the scraping process', weight='bold')
 plt.savefig('fig5.png')
 
 # Plot the delta_t against the response_size - to see correlation.
-q_cols = log_df.loc[:, ['delta_t', 'size']]
+fig, ax = plt.subplots()
+ax.scatter(log_df.delta_t.astype('float'), log_df.response_size, color = 'green')
+ax.fmt_xdata = mdates.DateFormatter('%s-%f')
+plt.savefig('fig6.png')
+
+q_cols = log_df.loc[:, ['delta_t', 'response_size']]
 print(q_cols.corr(method='pearson'))
+
+##########################
+# Descriptive statistics #
+################################################################################
+# sample identification
+#sample should be from befor 2008
+full_data = full_data.loc[full_data['Date_of_sale'] <= '2007-12-31']
+
+# deleting outliers
+full_data = full_data.loc[full_data['sqm_price']<80000]
+full_data = full_data.loc[full_data['Sell_price']<10000000]
+print('missingness on address: ',round((full_data.iloc[:, -1].isna().mean())*100,2), "%")
+full_data = full_data[full_data['longitude']>12]
+
+full_data = full_data.sort_values('Date_of_sale')
+full_data = full_data.reset_index(drop=True)
+
+#############################
+# Location based statistics #
+################################################################################
+#parse the opening year from int to string to datetime
+df_sstation['Opened'] = df_sstation['Opened'].apply(lambda x: str(x))
+df_mstation['Opened'] = df_mstation['Opened'].apply(lambda x: str(x))
+df_sstation['Opened'] = df_sstation['Opened'].apply(lambda x: parse(x))
+df_mstation['Opened'] = df_mstation['Opened'].apply(lambda x: parse(x))
+#parse the date of sale from to datetime
+full_data['Date_of_sale'] = full_data['Date_of_sale'].apply(lambda x: str(x))
+full_data['Date_of_sale'] = full_data['Date_of_sale'].apply(lambda x: parse(x))
+
+#calculate which station were open at the year of the sale
+def was_opened(property_, stations):
+    open_stations = {}
+    for i in range(len(stations)):
+        if (stations.iat[i,2] < property_[2]) == True:
+            open_stations[stations.iat[i,0]] = (abs(stations.iat[i,-1]), abs(stations.iat[i,-2]))
+    return open_stations
+
+#calculate distance to closeste open station
+def get_distance_opened(property_, df_stations):
+    stations = was_opened(property_, df_stations)
+    if  stations == {}:
+        return None, None
+    property_loc = (property_[-2], property_[-1])
+    if property_loc[0] is not None or property_loc[1] is not None:
+        min_dist = 999999999999999999999
+        min_dist_station = ''
+        for station, station_loc in stations.items():
+            dist = geodesic(station_loc, property_loc).km
+            if dist < min_dist:
+                min_dist = dist
+                min_dist_station = station
+        return round(min_dist,5), min_dist_station
+    else:
+        return None, None
+
+def was_not_opened(property_, stations):
+    open_stations = {}
+    for i in range(len(stations)):
+        if (stations.iat[i,2] > property_[2]) == True:
+            open_stations[stations.iat[i,0]] = (abs(stations.iat[i,-1]),abs(stations.iat[i,-2]))
+    return open_stations
+
+
+def get_distance_not_opened(property_, df_stations):
+    stations = was_not_opened(property_, df_stations)
+    if  stations == {}:
+        return None, None
+    property_loc = (property_[-2], property_[-1])
+    if property_loc[0] is not None or property_loc[1] is not None:
+        min_dist = 999999999999999999999
+        min_dist_station = ''
+        for station, station_loc in stations.items():
+            dist = geodesic(station_loc, property_loc).km
+            if dist < min_dist:
+                min_dist = dist
+                min_dist_station = station
+        return round(min_dist,3), min_dist_station
+    else:
+        return None, None
+
+
+geolocator = Nominatim(user_agent="Social Data Science Student", timeout =50)
+copenhagen = geolocator.geocode("Copenhagen")[-1]
+
+def dist_city_center(property_):
+    property_loc = (property_[-2], property_[-1])
+    if property_loc[0] is not None or property_loc[1] is not None:
+        return round(geodesic(property_loc, copenhagen).km, 3)
+    else:
+        return None
+
+# construct distance objects
+distance_m = full_data.apply(lambda x: get_distance_opened(x, df_mstation), axis=1)
+distance_s = full_data.apply(lambda x: get_distance_opened(x, df_sstation), axis=1)
+distance_m_const = full_data.apply(lambda x: get_distance_not_opened(x, df_mstation), axis=1)
+distance_s_const = full_data.apply(lambda x: get_distance_not_opened(x, df_sstation), axis=1)
+distance_c = full_data.apply(dist_city_center, axis=1)
+
+full_data['m_distance'], full_data['m_station'] = [m[0]for m in distance_m], [m[1]for m in distance_m]
+full_data['s_distance'], full_data['s_station'] = [s[0]for s in distance_s], [s[1]for s in distance_s]
+full_data['m_distance_const'], full_data['m_station_const'] = [m[0]for m in distance_m_const], [m[1]for m in distance_m_const]
+full_data['s_distance_const'], full_data['s_station_const'] = [s[0]for s in distance_s_const], [s[1]for s in distance_s_const]
+full_data['c_distance'] = distance_c
+
+# construct percentage differenc from roling mean
+full_data['z_sqm_price'] = (full_data.sqm_price -\
+                            full_data.sqm_price.rolling(window=30).mean())\
+                            / full_data.sqm_price.rolling(window=30).mean()*100
+
+# safe file
+file_path = dir + "/boliga/data/analysis_data.csv"
+with open(file_path, mode='w', encoding='UTF-8',
+              errors='strict', buffering=1) as f:
+    f.write(full_data.to_csv())
+
+# make distance plot
+fig, (ax1, ax2) = plt.subplots(2, figsize=(10, 8), sharex = True, sharey=True)
+fig.suptitle('square meter price by distance', weight="bold")
+fig.text(0.04, 0.5, '%-difference in square meter price from rolling mean', va='center', rotation='vertical')
+
+sns.regplot(x='m_distance', y='z_sqm_price', data= full_data, scatter=False, lowess= True, color='green', ax =ax1)
+ax1.set_xlabel("")
+ax1.set_ylabel("")
+ax1.set_xlim(0,5)
+
+sns.regplot(x='c_distance', y='z_sqm_price', data=full_data, scatter=False, lowess= True, color='green',line_kws={'alpha':0.5}, ax=ax2)
+ax2.set_xlabel('distance in kilometers')
+ax2.set_ylabel('')
+ax2.set_xlim(0,5)
+ax2.set_ylim(-11,11)
+
+plt.tight_layout(pad=3, w_pad=2.5, h_pad=2)
+plt.savefig('fig7.png')
