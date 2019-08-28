@@ -433,10 +433,35 @@ full_data['Date_of_sale'] = full_data['Date_of_sale'].apply(lambda x: str(x))
 full_data['Date_of_sale'] = full_data['Date_of_sale'].apply(lambda x: parse(x))
 
 # make distance plot
+from skmisc.loess import loess
+from scipy.signal import savgol_filter
+
+datafile = dir + "/boliga/data/analysis_data.csv"
+df = pd.read_csv(datafile, index_col=0)
+df = df[['z_sqm_price', 'm_distance']]
+df = df.dropna()
+df.sort_values('z_sqm_price')
+
+x = df['m_distance'].to_numpy()
+y = df['z_sqm_price'].to_numpy()
+sorted_indices = np.argsort(x)
+sorted_x = x[sorted_indices]
+
+l = loess(x, y, frac=0.1)
+l.fit()
+pred = l.predict(sorted_x, stderror=True)
+conf = pred.confidence()
+
+lowess = pred.values
+ll = conf.lower
+ul = conf.upper
+
+# plt.plot(x, y, '+')
 fig, ax1 = plt.subplots( figsize=(13, 4))
-sns.regplot(x='m_distance', y='z_sqm_price', data= full_data, scatter=False, lowess= True, color='green', ax =ax1)
-ax1.set_xlabel("distance from nearest metro station")
+ax1.plot(sorted_x, lowess, color='green')
+ax1.fill_between(sorted_x,ll,ul,alpha=.15, color='green')
 ax1.set_ylabel('%-difference in square meter price from rolling mean')
+ax.set_xlabel("distance in kilometers")
 ax1.set_xlim(0,5)
 plt.savefig('fig7.png')
 
@@ -513,21 +538,26 @@ sns.lineplot(data=open2002, x='Date_of_sale', y='z_sqm_price', hue='Grouped_dist
 ax1.axvline(2002, color='k', linestyle=':')
 ax1.set_xlabel("Year which property was sold")
 ax1.set_ylabel("%-difference in square meter price from rolling mean")
+ax1.margins(0)
 sns.lineplot(data=open2003, x='Date_of_sale', y='z_sqm_price', hue='Grouped_distance', palette='Greens', ax=ax2)
-ax2.axvline(2004, color='k', linestyle=':')
-ax2.set_xlabel("Year which property was sold")
-ax2.set_ylabel("%-difference in square meter price from rolling mean")
-sns.lineplot(data=open2004, x='Date_of_sale', y='z_sqm_price', hue='Grouped_distance', palette='Greens', ax=ax3)
-ax3.axvline(2003, color='k', linestyle=':')
+ax3.axvline(2004, color='k', linestyle=':')
 ax3.set_xlabel("Year which property was sold")
 ax3.set_ylabel("%-difference in square meter price from rolling mean")
+ax3.margins(0)
+sns.lineplot(data=open2004, x='Date_of_sale', y='z_sqm_price', hue='Grouped_distance', palette='Greens', ax=ax3)
+ax2.axvline(2003, color='k', linestyle=':')
+ax2.set_xlabel("Year which property was sold")
+ax2.set_ylabel("%-difference in square meter price from rolling mean")
+ax2.margins(0)
 sns.lineplot(data=open2007, x='Date_of_sale', y='z_sqm_price', hue='Grouped_distance', palette='Greens', ax=ax4)
 ax4.axvline(2007, color='k', linestyle=':')
 ax4.set_xlim(1998,2008)
 ax4.set_xlabel("Year which property was sold")
 ax4.set_ylabel("%-difference in square meter price from rolling mean")
 ax4.legend(loc=1)
+ax4.margins(0)
 plt.savefig('fig11.png')
+
 
 fig, ax = plt.subplots(figsize = (13, 4))
 sns.lineplot(data=open2002, x='Date_of_sale', y='z_sqm_price', hue='Grouped_distance', palette='Greens', ax=ax)
@@ -537,4 +567,5 @@ ax.legend(loc=4)
 ax.set_xlabel("Year which property was sold")
 ax.set_ylabel("%-difference in square meter price from rolling mean")
 plt.ylim(-30,20)
+plt.margins(0)
 plt.savefig('fig11_2002.png')
