@@ -25,6 +25,23 @@ df_mstation[['Longitude','Latitude']] = df_mstation[['Longitude','Latitude']].ab
 df_sstation = pd.read_csv(path_ssta, index_col=0)
 df_sstation[['Longitude', 'Latitude']] = df_sstation[['Longitude','Latitude']].abs()
 
+##########################
+# Descriptive statistics #
+################################################################################
+# sample identification
+#sample should be from befor 2008
+full_data = full_data.loc[full_data['Date_of_sale'] <= '2007-12-31']
+
+# deleting outliers
+full_data = full_data.loc[full_data['sqm_price']<80000]
+full_data = full_data.loc[full_data['Sell_price']<10000000]
+print('missingness on address: ',round((full_data.iloc[:, -1].isna().mean())*100,2), "%")
+print('missingness on address: ',full_data.iloc[:, -1].isna().sum())
+full_data = full_data[full_data['longitude']>12]
+
+full_data = full_data.sort_values('Date_of_sale')
+full_data = full_data.reset_index(drop=True)
+
 ################
 # Data quality #
 ################################################################################
@@ -58,7 +75,7 @@ print("descriptive statistics: \n", percent_df)
 
 # Histogram of the distrubution of square meters
 fig1 = plt.hist(full_data['m2'], color = 'green', edgecolor = 'black', bins=40, linewidth=1.2)
-fig1 = plt.title('Size of sold real-estate properties', weight='bold')
+fig1 = plt.title('a: Size of sold real-estate properties', weight='bold')
 fig1 = plt.xlabel('Square meters', color='black')
 fig1 = plt.ylabel('Observations', color='black')
 fig1 = plt.xlim(0,420)
@@ -67,7 +84,7 @@ plt.savefig('fig1.png')
 
 # Rooms in sold properties
 fig2 = plt.hist(full_data['Rooms'], color = 'green', edgecolor='black', bins=20, linewidth=1.2)
-fig2 = plt.title('Rooms in sold real-estate properties', weight='bold')
+fig2 = plt.title('b: Rooms in sold real-estate properties', weight='bold')
 fig2 = plt.xlabel('Rooms', color='black')
 fig2 = plt.ylabel('Observations', color='black')
 fig2 = plt.xlim(0,12)
@@ -95,29 +112,69 @@ log_df.columns = ['id', 'project', 'connector_type', 't', 'delta_t', 'url',
 print("head of log_file: \n", log_df.head())
 
 # Visualization of the time it took to make the call for data
-plt.figure(figsize = (12, 4))
+plt.figure(figsize = (13, 4))
 plt.plot(log_df['datetime'], log_df.delta_t, color='green')
 plt.ylabel('Delta t', color='black')
 plt.xlabel('Scraping process', color='black')
-plt.title('The time it took to make the call for data', weight='bold')
+plt.title('a: The time it took to make the call for data', weight='bold')
 plt.savefig('fig4.png')
 
 # Visualization of the response size through the scraping process
-plt.figure(figsize = (12, 4))
+plt.figure(figsize = (6.5, 4))
 plt.plot(log_df['datetime'], log_df['response_size'], color='green')
 plt.ylabel('bytes in the csv files', color='black')
 plt.xlabel('Scraping process', color='black')
-plt.title('The size of csv files through the scraping process', weight='bold')
+plt.title('b: The size of csv files through the scraping process', weight='bold')
 plt.savefig('fig5.png')
 
 # Plot the delta_t against the response_size - to see correlation.
-fig, ax = plt.subplots()
+fig, ax = plt.subplots(figsize = (5, 4))
 ax.scatter(log_df.delta_t.astype('float'), log_df.response_size, color = 'green')
 ax.fmt_xdata = mdates.DateFormatter('%s-%f')
+plt.ylabel('')
+plt.xlabel('Delta t', color='black')
+plt.title('c: assocation between Delta t and file size', weight='bold')
 plt.savefig('fig6.png')
 
 q_cols = log_df.loc[:, ['delta_t', 'response_size']]
 print(q_cols.corr(method='pearson'))
+
+#Preparing DataFrame with monthly change
+dta = full_data['Date_of_sale']
+dta1 = pd.to_datetime(dta)
+merged1 = pd.concat([dta1, full_data['sqm_price']], axis=1)
+merged1 = merged1.set_index('Date_of_sale')
+
+monthly_price = round(merged1['sqm_price'].resample('M').mean(),2)
+monthly_price = monthly_price.to_frame()
+
+monthly_price['Monthly change'] = round(monthly_price.pct_change(periods=1, axis=0),2)
+def percent_change(df):
+    monthly_price['Total change'] = round((100 * (monthly_price.sqm_price/monthly_price.iloc[0].sqm_price -1)),2)
+    return monthly_price
+
+monthly_price.groupby('Date_of_sale').apply(percent_change)
+monthly_price.index = pd.to_datetime(monthly_price.index)
+
+#Figure 9
+fig, ax = plt.subplots()
+ax.plot(monthly_price['Monthly change'], color='green')
+plt.title('a: Monthly change in sqare meter price', weight = 'bold')
+plt.xlabel('Year', color='black')
+plt.ylabel('Change, %', color='black')
+fig.autofmt_xdate()
+ax.fmt_xdata = mdates.DateFormatter('%Y-%m-%d')
+plt.savefig('fig9.png')
+
+# Figure 10
+fig, ax = plt.subplots()
+ax.plot(monthly_price['Total change'], color ='green')
+plt.title('b: Total change in square meter price since 1995', weight='bold')
+plt.xlabel('Year', color='black')
+plt.ylabel('Change, %', color='black')
+fig.autofmt_xdate()
+ax.fmt_xdata = mdates.DateFormatter('%Y-%m-%d')
+plt.savefig('fig10.png')
 
 ##########################
 # Descriptive statistics #
@@ -134,6 +191,7 @@ full_data = full_data[full_data['longitude']>12]
 
 full_data = full_data.sort_values('Date_of_sale')
 full_data = full_data.reset_index(drop=True)
+print(full_data.shape)
 
 #############################
 # Location based statistics #
@@ -239,6 +297,28 @@ Train_legend =   '''
 
 m.get_root().html.add_child(folium.Element(Train_legend))
 m.save('copenhagen_map.html')
+
+address = pd.DataFrame([a[0] + ' ' + a[-1][6:]\
+           for a in full_data['Address'].str.split(',')])
+header=['ad']
+address.columns=header
+
+municipalities = ['Frederiksberg C', 'Frederiksberg', 'København K', 'København V', 'København S', 'København N', 'København Ø']
+
+address_list = []
+
+for i in address['ad']:
+    for x in municipalities:
+        if x in i:
+            address_list.append(x)
+            break
+
+# Making a list of municipalities
+Municipality = pd.DataFrame(address_list)
+Municipality.columns=['Municipality']
+
+# Adding the list to the housing data
+full_data['Municipality'] = Municipality
 
 # using selenium to safe HTML as png
 from selenium import webdriver
@@ -348,21 +428,113 @@ browser.quit()
 path_analysis = dir +'/boliga/data/analysis_data.csv'
 full_data = pd.read_csv(path_analysis, index_col=0)
 
+# ensuring date time as column type
+full_data['Date_of_sale'] = full_data['Date_of_sale'].apply(lambda x: str(x))
+full_data['Date_of_sale'] = full_data['Date_of_sale'].apply(lambda x: parse(x))
+
 # make distance plot
-fig, (ax1, ax2) = plt.subplots(2, figsize=(10, 8), sharex = True, sharey=True)
-fig.suptitle('square meter price by distance', weight="bold")
-fig.text(0.04, 0.5, '%-difference in square meter price from rolling mean', va='center', rotation='vertical')
-
+fig, ax1 = plt.subplots( figsize=(13, 4))
 sns.regplot(x='m_distance', y='z_sqm_price', data= full_data, scatter=False, lowess= True, color='green', ax =ax1)
-ax1.set_xlabel("")
-ax1.set_ylabel("")
+ax1.set_xlabel("distance from nearest metro station")
+ax1.set_ylabel('%-difference in square meter price from rolling mean')
 ax1.set_xlim(0,5)
-
-sns.regplot(x='c_distance', y='z_sqm_price', data=full_data, scatter=False, lowess= True, color='green',line_kws={'alpha':0.5}, ax=ax2)
-ax2.set_xlabel('distance in kilometers')
-ax2.set_ylabel('')
-ax2.set_xlim(0,5)
-ax2.set_ylim(-11,11)
-
-plt.tight_layout(pad=3, w_pad=2.5, h_pad=2)
 plt.savefig('fig7.png')
+
+# make year of opening plot_point
+# defining which stations opened when
+m2002 = ['Sundby', 'Ørestad', 'Nørreport', 'Lergravsparken', 'Kongens Nytorv', 'Islands Brygge', 'DR Byen', 'Bella Center', 'Amagerbro']
+m2003 = ['Fasanvej', 'Forum', 'Frederiksberg', 'Lindevang']
+m2004 = ['Flintholm']
+m2007 = ['Amager Strand', 'Øresund','Femøren', 'Kastrup']
+
+open2002 = full_data.loc[full_data['m_station'].isin(m2002)]
+open2003 = full_data.loc[full_data['m_station'].isin(m2003)]
+open2004 = full_data.loc[full_data['m_station'].isin(m2004)]
+open2007 = full_data.loc[full_data['m_station'].isin(m2007)]
+
+open2002_c = full_data.loc[full_data['m_station_const'].isin(m2002)]
+open2003_c = full_data.loc[full_data['m_station_const'].isin(m2003)]
+open2004_c = full_data.loc[full_data['m_station_const'].isin(m2004)]
+open2007_c = full_data.loc[full_data['m_station_const'].isin(m2007)]
+
+distance_to_metro2002 = open2002['m_distance']
+distance_to_metro2003 = open2003['m_distance']
+distance_to_metro2004 = open2004['m_distance']
+distance_to_metro2007 = open2007['m_distance']
+
+open2002.insert(0, 'distance_to_metro', distance_to_metro2002)
+open2003.insert(0, 'distance_to_metro', distance_to_metro2003)
+open2004.insert(0, 'distance_to_metro', distance_to_metro2004)
+open2007.insert(0, 'distance_to_metro', distance_to_metro2007)
+
+distance_to_metro2002 = open2002_c['m_distance_const']
+distance_to_metro2003 = open2003_c['m_distance_const']
+distance_to_metro2004 = open2004_c['m_distance_const']
+distance_to_metro2007 = open2007_c['m_distance_const']
+
+open2002_c.insert(0, 'distance_to_metro', distance_to_metro2002)
+open2003_c.insert(0, 'distance_to_metro', distance_to_metro2003)
+open2004_c.insert(0, 'distance_to_metro', distance_to_metro2004)
+open2007_c.insert(0, 'distance_to_metro', distance_to_metro2007)
+
+open2002 = open2002.append(open2002_c, ignore_index=True)
+open2003 = open2003.append(open2003_c, ignore_index=True)
+open2004 = open2004.append(open2004_c, ignore_index=True)
+open2007 = open2007.append(open2007_c, ignore_index=True)
+
+def group_dist(dist):
+    if dist < 0.5:
+        x = 'Less than 0.5 km'
+    elif dist >= 0.5 and dist <= 1:
+        x = '0.5 -1 km'
+    else:
+        x = 'Above 1 km'
+    return x
+
+dist_group2002 = open2002['distance_to_metro'].apply(lambda x: group_dist(x))
+dist_group2003 = open2003['distance_to_metro'].apply(lambda x: group_dist(x))
+dist_group2004 = open2004['distance_to_metro'].apply(lambda x: group_dist(x))
+dist_group2007 = open2007['distance_to_metro'].apply(lambda x: group_dist(x))
+open2002.insert(1, 'Grouped_distance', dist_group2002)
+open2003.insert(1, 'Grouped_distance', dist_group2003)
+open2004.insert(1, 'Grouped_distance', dist_group2004)
+open2007.insert(1, 'Grouped_distance', dist_group2007)
+
+open2002['Date_of_sale'] = open2002['Date_of_sale'].apply(lambda x: x.year)
+open2003['Date_of_sale'] = open2003['Date_of_sale'].apply(lambda x: x.year)
+open2004['Date_of_sale'] = open2004['Date_of_sale'].apply(lambda x: x.year)
+open2007['Date_of_sale'] = open2007['Date_of_sale'].apply(lambda x: x.year)
+
+fig, (ax1, ax2, ax3, ax4) = plt.subplots(4, figsize=(13, 20))
+# fig.suptitle('%-difference in square meter price time from opening date', weight="bold")
+plt.tight_layout(pad=3, w_pad=2.5, h_pad=2)
+
+sns.lineplot(data=open2002, x='Date_of_sale', y='z_sqm_price', hue='Grouped_distance', palette='Greens', ax=ax1)
+ax1.axvline(2002, color='k', linestyle=':')
+ax1.set_xlabel("Year which property was sold")
+ax1.set_ylabel("%-difference in square meter price from rolling mean")
+sns.lineplot(data=open2003, x='Date_of_sale', y='z_sqm_price', hue='Grouped_distance', palette='Greens', ax=ax2)
+ax2.axvline(2004, color='k', linestyle=':')
+ax2.set_xlabel("Year which property was sold")
+ax2.set_ylabel("%-difference in square meter price from rolling mean")
+sns.lineplot(data=open2004, x='Date_of_sale', y='z_sqm_price', hue='Grouped_distance', palette='Greens', ax=ax3)
+ax3.axvline(2003, color='k', linestyle=':')
+ax3.set_xlabel("Year which property was sold")
+ax3.set_ylabel("%-difference in square meter price from rolling mean")
+sns.lineplot(data=open2007, x='Date_of_sale', y='z_sqm_price', hue='Grouped_distance', palette='Greens', ax=ax4)
+ax4.axvline(2007, color='k', linestyle=':')
+ax4.set_xlim(1998,2008)
+ax4.set_xlabel("Year which property was sold")
+ax4.set_ylabel("%-difference in square meter price from rolling mean")
+ax4.legend(loc=1)
+plt.savefig('fig11.png')
+
+fig, ax = plt.subplots(figsize = (13, 4))
+sns.lineplot(data=open2002, x='Date_of_sale', y='z_sqm_price', hue='Grouped_distance', palette='Greens', ax=ax)
+# plt.title('%-difference in square meter price time from opening date', weight="bold")
+ax.axvline(2002, color='k', linestyle=':')
+ax.legend(loc=4)
+ax.set_xlabel("Year which property was sold")
+ax.set_ylabel("%-difference in square meter price from rolling mean")
+plt.ylim(-30,20)
+plt.savefig('fig11_2002.png')
