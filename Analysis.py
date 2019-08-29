@@ -461,7 +461,7 @@ fig, ax1 = plt.subplots( figsize=(13, 4))
 ax1.plot(sorted_x, lowess, color='green')
 ax1.fill_between(sorted_x,ll,ul,alpha=.15, color='green')
 ax1.set_ylabel('%-difference in square meter price from rolling mean')
-ax.set_xlabel("distance in kilometers")
+ax1.set_xlabel("distance in kilometers")
 ax1.set_xlim(0,5)
 plt.savefig('fig7.png')
 
